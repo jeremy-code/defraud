@@ -1,24 +1,37 @@
 {
   "name": "defraud",
+  "description": "Defraud is a tool to help you identify and avoid scams",
+  "version": "0.0.0",
   "private": true,
+  "keywords": [
+    "scam",
+    "defraud"
+  ],
+  "license": "MIT",
+  "author": "Jeremy Nguyen <hi@jeremy.ng> (https://jeremy.ng)",
+  "repository": "github:jeremy-code/defraud",
+  "homepage": "https://defraud.io",
   "scripts": {
+    "prepare": "husky",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
-    "prettier": "^3.2.5",
-    "turbo": "latest"
+    "format": "prettier . --write"
   },
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@1.22.19",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "devDependencies": {
+    "@defraud/eslint-config": "workspace:*",
+    "@defraud/tsconfig": "workspace:*",
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@types/eslint": "^8.56.8",
+    "eslint": "^9.0.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "turbo": "latest",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@8.15.6+sha256.01c01eeb990e379b31ef19c03e9d06a14afa5250b82e81303f88721c99ff2e6f"
 }
