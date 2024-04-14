@@ -1,0 +1,33 @@
+{
+  "name": "@defraud/database",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema.ts"
+  },
+  "scripts": {
+    "db:check": "drizzle-kit check:pg",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:introspect": "drizzle-kit introspect:pg",
+    "db:migrate": "tsx './src/migrate.ts'",
+    "db:migrate:drop": "drizzle-kit drop",
+    "db:push": "drizzle-kit push:pg",
+    "db:studio": "drizzle-kit studio",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@auth/core": "^0.29.0",
+    "@next/env": "^14.2.1",
+    "drizzle-orm": "^0.30.8",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "@defraud/eslint-config": "workspace:*",
+    "@defraud/tsconfig": "workspace:*",
+    "@types/pg": "^8.11.5",
+    "drizzle-kit": "^0.20.14",
+    "eslint": "^8.57.0",
+    "tsx": "^4.7.2"
+  }
+}

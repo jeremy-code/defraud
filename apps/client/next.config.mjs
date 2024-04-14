@@ -8,6 +8,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 const nextConfig = {
   poweredByHeader: false,
   logging: { fetches: { fullUrl: true } },
+  transpilePackages: ["@defraud/database"],
   experimental: {
     webpackBuildWorker: true,
   },

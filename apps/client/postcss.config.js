@@ -1,4 +1,4 @@
-/** @type {import('postcss').PostCss} */
+/** @type {import('postcss').Postcss} */
 module.exports = {
   plugins: ["tailwindcss", "autoprefixer"],
 };
