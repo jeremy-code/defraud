@@ -1,9 +1,10 @@
-import "./globals.css";
+import "@defraud/ui/globals.css";
 
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Cabin } from "next/font/google";
-import { Analytics, AppProvider } from "#components/misc/index.ts";
+
+import { Analytics, AppProvider } from "@/components/misc";
 
 const cabin = Cabin({ subsets: ["latin"], variable: "--font-sans" });
 

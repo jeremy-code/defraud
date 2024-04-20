@@ -1,0 +1,4 @@
+{
+  "extends": "@defraud/tsconfig/react",
+  "include": ["**/*.ts", "**/*.tsx"]
+}

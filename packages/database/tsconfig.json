@@ -1,7 +1,3 @@
 {
-  "extends": "@defraud/tsconfig/base",
-  "compilerOptions": {
-    "module": "Preserve",
-    "moduleResolution": "Bundler"
-  }
+  "extends": "@defraud/tsconfig/react"
 }

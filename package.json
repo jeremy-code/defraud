@@ -25,12 +25,12 @@
     "@defraud/eslint-config": "workspace:*",
     "@defraud/tsconfig": "workspace:*",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
-    "@types/eslint": "^8.56.9",
     "eslint": "^8.57.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
-    "turbo": "latest",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "turbo": "^1.13.2",
     "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@8.15.6+sha256.01c01eeb990e379b31ef19c03e9d06a14afa5250b82e81303f88721c99ff2e6f"

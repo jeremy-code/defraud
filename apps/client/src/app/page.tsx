@@ -1,11 +1,15 @@
-import { db } from "@defraud/database";
+import { Button } from "@defraud/ui/components/button";
 
-const Page = async () => {
-  const users = await db.query.users.findFirst();
+import { Navbar } from "@/components/layout";
 
-  console.log(users);
-
-  return <div>Test test test</div>;
+const Page = () => {
+  return (
+    <>
+      <Navbar />
+      <Button>Test</Button>
+      <div>Test test test</div>
+    </>
+  );
 };
 
 export default Page;

@@ -1,7 +1,9 @@
 {
   "extends": "@defraud/tsconfig/nextjs",
   "compilerOptions": {
-    "plugins": [{ "name": "next" }]
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "next-env.d.ts",

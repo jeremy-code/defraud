@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "arcanis.vscode-zipfs",
+    "bradlc.vscode-tailwindcss",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "github.vscode-github-actions"
