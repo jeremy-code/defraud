@@ -2,11 +2,11 @@ import "@defraud/ui/globals.css";
 
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Cabin } from "next/font/google";
+import { Lexend } from "next/font/google";
 
 import { Analytics, AppProvider } from "@/components/misc";
 
-const cabin = Cabin({ subsets: ["latin"], variable: "--font-sans" });
+const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://defraud.io"),
@@ -23,10 +23,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
     /**
      * @remarks
      * `suppressHydrationWarning` is necessary since html element is updated by
-     * next-themes for dark mode -- property only applies one level deep, so
+     * next-themes for dark mode — property only applies one level deep, so
      * hydration warnings won't be blocked on children elements
      */
-    <html lang="en" className={cabin.className} suppressHydrationWarning>
+    <html lang="en" className={lexend.className} suppressHydrationWarning>
       <body>
         <AppProvider>
           {children}

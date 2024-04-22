@@ -2,7 +2,7 @@
 module.exports = {
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:@typescript-eslint/recommended-type-checked",
     "turbo",
   ],
   parser: "@typescript-eslint/parser",

@@ -1,6 +1,8 @@
 import typography from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
+import colors from "tailwindcss/colors";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   darkMode: ["selector", "[data-theme='dark']"],
@@ -13,6 +15,7 @@ export default {
     },
     extend: {
       colors: {
+        gray: colors.stone,
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -51,6 +54,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ["var(--font-lexend)", ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
