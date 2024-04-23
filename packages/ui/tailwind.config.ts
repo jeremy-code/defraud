@@ -2,7 +2,7 @@ import typography from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 import colors from "tailwindcss/colors";
-import defaultTheme from "tailwindcss/defaultTheme";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   darkMode: ["selector", "[data-theme='dark']"],
@@ -56,7 +56,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-lexend)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-lexend)", ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
