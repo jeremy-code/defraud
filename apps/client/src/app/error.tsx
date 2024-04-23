@@ -12,9 +12,7 @@ const Error = ({ error, reset }: ErrorProps) => {
     <div>
       <h1>Error</h1>
       <p>Unfortunately, an error has occurred.</p>
-      <p>
-        <strong>{error.message}</strong>
-      </p>
+      <p>{error.message}</p>
       <div>
         <button
           onClick={() => {

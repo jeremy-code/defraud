@@ -27,8 +27,8 @@
   }
 
   [data-theme="dark"] {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 20, 14%, 4%; /* stone.950 */
+    --foreground: 60, 9%, 98%; /* stone.50 */
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
