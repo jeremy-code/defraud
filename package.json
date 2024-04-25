@@ -16,7 +16,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "engines": {
     "node": ">=18"
@@ -30,7 +31,7 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "turbo": "^1.13.2",
+    "turbo": "^1.13.3",
     "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@8.15.6+sha256.01c01eeb990e379b31ef19c03e9d06a14afa5250b82e81303f88721c99ff2e6f"

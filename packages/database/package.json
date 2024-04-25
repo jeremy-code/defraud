@@ -17,17 +17,17 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx "
   },
   "dependencies": {
-    "@auth/core": "^0.29.0",
-    "@next/env": "^14.2.1",
-    "drizzle-orm": "^0.30.8",
+    "@auth/core": "^0.30.0",
+    "@next/env": "^14.2.3",
+    "drizzle-orm": "^0.30.9",
     "pg": "^8.11.5"
   },
   "devDependencies": {
     "@defraud/eslint-config": "workspace:*",
     "@defraud/tsconfig": "workspace:*",
     "@types/pg": "^8.11.5",
-    "drizzle-kit": "^0.20.14",
+    "drizzle-kit": "^0.20.17",
     "eslint": "^8.57.0",
-    "tsx": "^4.7.2"
+    "tsx": "^4.7.3"
   }
 }

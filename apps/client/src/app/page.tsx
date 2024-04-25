@@ -6,7 +6,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <main className="mx-auto w-full max-w-screen-xl p-4">
+      <main className="container py-4">
         <Button>Test</Button>
         <div>Test test test</div>
       </main>

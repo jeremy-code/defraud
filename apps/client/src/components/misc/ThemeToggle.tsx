@@ -17,7 +17,11 @@ export const ThemeToggle = (props: ThemeToggleProps) => {
   const { resolvedTheme, setTheme } = useTheme();
   const isLight = resolvedTheme === "light";
 
-  const ThemeIcon = hydrated ? (isLight ? Sun : Moon) : RefreshCcw;
+  const ThemeIcon =
+    hydrated ?
+      isLight ? Sun
+      : Moon
+    : RefreshCcw;
 
   // Styles taken from https://ui.shadcn.com/docs/components/switch
   return (
@@ -28,13 +32,13 @@ export const ThemeToggle = (props: ThemeToggleProps) => {
       }}
       disabled={!hydrated}
       className={cn(
-        "focus-visible:ring-ring focus-visible:ring-offset-background data-[state=checked]:bg-primary data-[state=unchecked]:bg-input inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+        "inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
         props.className,
       )}
       {...props}
     >
-      <Switch.Thumb className="bg-background pointer-events-none flex h-5 w-5 place-content-center items-center justify-center rounded-full shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0">
-        <ThemeIcon className={cn("h-4 w-4", { "animate-spin": !hydrated })} />
+      <Switch.Thumb className="pointer-events-none flex size-5 place-content-center items-center justify-center rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0">
+        <ThemeIcon className={cn("size-4", { "animate-spin": !hydrated })} />
       </Switch.Thumb>
     </Switch.Root>
   );

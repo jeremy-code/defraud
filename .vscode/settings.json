@@ -1,8 +1,19 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "packages/tsconfig/*.json",
+        "!packages/tsconfig/package.json"
+      ],
+      "url": "https://json.schemastore.org/tsconfig"
+    }
+  ],
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true // Use the workspace version of TypeScript (useful for Next.js)
 }

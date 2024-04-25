@@ -23,13 +23,13 @@ const Error = ({ error, reset }: ErrorProps) => {
   return (
     <>
       <Navbar />
-      <main className="mx-auto flex w-full max-w-screen-xl flex-col-reverse place-content-center items-center gap-12 p-4 lg:flex-row">
-        <div className="flex flex-col place-content-center gap-2">
-          <p className="text-muted-foreground text-sm ">Id: {error.digest}</p>
+      <main className="container flex flex-col-reverse items-center justify-center gap-12 py-4 lg:flex-row">
+        <div className="flex flex-col gap-2">
+          <p className="text-sm text-muted-foreground">Id: {error.digest}</p>
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
             An Error Occurred
           </h1>
-          <p className="text-muted-foreground mt-2">
+          <p className="mt-2 text-muted-foreground">
             Unfortunately, an error has occurred while trying to load the page.
           </p>
 
@@ -48,15 +48,13 @@ const Error = ({ error, reset }: ErrorProps) => {
           </div>
         </div>
 
-        <div>
-          <ThemeImage
-            srcDark={errorDark}
-            srcLight={errorLight}
-            alt="An Error Occurred"
-            sizes="448px"
-            className="mx-auto max-w-md"
-          />
-        </div>
+        <ThemeImage
+          srcDark={errorDark}
+          srcLight={errorLight}
+          alt="An Error Occurred"
+          sizes="(min-width: 640px) 448px, 320px"
+          className="mx-auto max-w-xs sm:max-w-md"
+        />
       </main>
       <Footer />
     </>

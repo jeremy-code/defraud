@@ -4,6 +4,7 @@ module.exports = {
   tabWidth: 2,
   singleQuote: false,
   trailingComma: "all",
+  experimentalTernaries: true,
   plugins: [
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
@@ -16,4 +17,8 @@ module.exports = {
     "^@/(.*)$",
     "^[./]",
   ],
+  // tailwindConfig is resolved relative to .prettierrc.js
+  tailwindConfig: "./apps/client/tailwind.config.ts",
+  tailwindAttributes: ["tw"], // for Satori
+  tailwindFunctions: ["classnames", "clsx", "cn", "cva"],
 };

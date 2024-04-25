@@ -11,7 +11,7 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem", // sizes.4 (16px)
     },
     extend: {
       colors: {
@@ -24,6 +24,17 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          50: "#FEF1F3",
+          100: "#FDE7EA",
+          200: "#FBD0D9",
+          300: "#F7ABBA",
+          400: "#F27891",
+          500: "#E63D64",
+          600: "#D52A5A",
+          700: "#B31E4B",
+          800: "#961D45",
+          900: "#7E1B3F",
+          950: "#470A20",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",

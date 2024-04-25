@@ -7,8 +7,8 @@ import { Logo, ThemeToggle } from "@/components/misc";
 
 export const Navbar = ({ className, ...rest }: ComponentProps<"header">) => {
   return (
-    <header className={cn("border-b ", className)} {...rest}>
-      <div className="mx-auto flex max-w-screen-xl justify-between p-4">
+    <header className={cn("border-b", className)} {...rest}>
+      <div className="container flex justify-between py-4">
         <Link className="flex items-center gap-2" href="/">
           {/* 24px = 1.5rem, aligns with line height */}
           <Logo width="1lh" />

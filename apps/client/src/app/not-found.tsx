@@ -10,19 +10,19 @@ const NotFound = () => {
   return (
     <>
       <Navbar />
-      <main className="mx-auto flex w-full max-w-screen-xl flex-col-reverse place-content-center items-center gap-12 p-4 lg:flex-row">
-        <div className="flex flex-col place-content-center gap-2">
+      <main className="container flex flex-col-reverse items-center justify-center gap-12 py-4 lg:flex-row">
+        <div className="flex flex-col gap-2">
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
             404 Page Not Found
           </h1>
-          <p className="text-muted-foreground mt-2">
+          <p className="mt-2 text-muted-foreground">
             Could not find requested resource. Please check the URL and try
             again.
           </p>
 
           <div className="mt-4 flex gap-2">
             <BackButton>
-              <ChevronLeft className="mr-2 h-4 w-4" />
+              <ChevronLeft className="mr-2 size-4" />
               Go Back
             </BackButton>
 
