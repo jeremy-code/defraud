@@ -1,2 +1,5 @@
-export { default as NotFound_Light } from "./NotFound_Light.webp";
-export { default as NotFound_Dark } from "./NotFound_Dark.webp";
+export { default as errorLight } from "./error-light.webp";
+export { default as errorDark } from "./error-dark.webp";
+
+export { default as notFoundLight } from "./notFound-light.webp";
+export { default as notFoundDark } from "./notFound-dark.webp";
