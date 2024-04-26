@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@defraud/ui/utils";
+import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
 import * as Switch from "@radix-ui/react-switch";
 import { Moon, RefreshCcw, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -38,7 +39,17 @@ export const ThemeToggle = (props: ThemeToggleProps) => {
       {...props}
     >
       <Switch.Thumb className="pointer-events-none flex size-5 place-content-center items-center justify-center rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0">
-        <ThemeIcon className={cn("size-4", { "animate-spin": !hydrated })} />
+        <AccessibleIcon
+          label={
+            hydrated ?
+              isLight ?
+                "Light Mode"
+              : "Dark Mode"
+            : "Loading"
+          }
+        >
+          <ThemeIcon className={cn("size-4", { "animate-spin": !hydrated })} />
+        </AccessibleIcon>
       </Switch.Thumb>
     </Switch.Root>
   );

@@ -20,7 +20,7 @@ const OpenGraphImage = async () => {
 
   return new ImageResponse(
     (
-      <div tw="flex size-full items-center justify-center bg-white">
+      <div tw="flex h-full w-full items-center justify-center bg-white">
         <div
           tw="flex"
           // Tailwind CSS flex gap classes seem to not work, see

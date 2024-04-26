@@ -10,7 +10,8 @@ export default {
   breakpoints: false,
   driver: "pg",
   dbCredentials: {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    connectionString: process.env.DB_URL!,
+    connectionString:
+      process.env.DB_URL ??
+      "postgres://postgres:N0T4R34LPA55W0RD@example.com:5432/db_name",
   },
 } satisfies Config;

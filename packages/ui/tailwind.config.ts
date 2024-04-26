@@ -6,8 +6,6 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   darkMode: ["selector", "[data-theme='dark']"],
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -61,11 +59,6 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
       fontFamily: {
         sans: ["var(--font-lexend)", ...fontFamily.sans],
       },
@@ -86,4 +79,4 @@ export default {
     },
   },
   plugins: [animate, typography],
-} satisfies Config;
+} satisfies Partial<Config>;

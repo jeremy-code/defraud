@@ -2,6 +2,7 @@
   "extends": "@defraud/tsconfig/nextjs",
   "compilerOptions": {
     "paths": {
+      // Unfortunately, Next.js does not yet support ${configDir} syntax
       "@/*": ["./src/*"]
     }
   },

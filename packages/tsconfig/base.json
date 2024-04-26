@@ -15,5 +15,6 @@
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["${configDir}/**/*.ts", "${configDir}/**/*.tsx"]
 }
