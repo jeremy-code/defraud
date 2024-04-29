@@ -14,7 +14,7 @@
     "db:migrate:drop": "drizzle-kit drop",
     "db:push": "drizzle-kit push:pg",
     "db:studio": "drizzle-kit studio",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx "
+    "lint": "eslint ."
   },
   "dependencies": {
     "@auth/core": "^0.30.0",

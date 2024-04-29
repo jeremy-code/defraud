@@ -7,7 +7,7 @@
     "build": "next build",
     "build:analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
-    "lint": "eslint --cache --cache-location .next/cache/eslint/ --ext .js,.jsx,.ts,.tsx ."
+    "lint": "eslint --cache --cache-location .next/cache/eslint/ ."
   },
   "dependencies": {
     "@defraud/database": "workspace:*",
