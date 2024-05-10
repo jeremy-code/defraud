@@ -7,12 +7,12 @@
     "./schema": "./src/schema.ts"
   },
   "scripts": {
-    "db:check": "drizzle-kit check:pg",
-    "db:generate": "drizzle-kit generate:pg",
-    "db:introspect": "drizzle-kit introspect:pg",
-    "db:migrate": "tsx './src/migrate.ts'",
+    "db:check": "drizzle-kit check",
+    "db:generate": "drizzle-kit generate",
+    "db:introspect": "drizzle-kit introspect",
+    "db:migrate": "drizzle-kit migrate",
     "db:migrate:drop": "drizzle-kit drop",
-    "db:push": "drizzle-kit push:pg",
+    "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "lint": "eslint ."
   },
@@ -26,8 +26,7 @@
     "@defraud/eslint-config": "workspace:*",
     "@defraud/tsconfig": "workspace:*",
     "@types/pg": "^8.11.6",
-    "drizzle-kit": "^0.20.18",
-    "eslint": "^8.57.0",
-    "tsx": "^4.9.3"
+    "drizzle-kit": "^0.21.0",
+    "eslint": "^8.57.0"
   }
 }

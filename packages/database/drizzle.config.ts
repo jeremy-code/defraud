@@ -5,12 +5,12 @@ import type { Config } from "drizzle-kit";
 loadEnvConfig(cwd());
 
 export default {
+  dialect: "postgresql",
   out: "./src/migration",
-  schema: "./src/schema.ts",
   breakpoints: false,
-  driver: "pg",
+  schema: "./src/schema.ts",
   dbCredentials: {
-    connectionString:
+    url:
       process.env.DB_URL ??
       "postgres://postgres:N0T4R34LPA55W0RD@example.com:5432/db_name",
   },
