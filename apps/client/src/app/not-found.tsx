@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@defraud/ui/components/button";
 import { ChevronLeft } from "lucide-react";
 
-import { notFoundDark, notFoundLight } from "@/assets";
+import { notFoundGraphic } from "@/assets";
 import { Footer, Navbar } from "@/components/layout";
 import { BackButton, ThemeImage } from "@/components/misc";
 
@@ -33,8 +33,7 @@ const NotFound = () => {
         </div>
 
         <ThemeImage
-          srcDark={notFoundDark}
-          srcLight={notFoundLight}
+          src={notFoundGraphic}
           alt="404 Page Not Found"
           sizes="(min-width: 1040px) 448px, 320px"
           // since image is tall, shrink down on smaller screens

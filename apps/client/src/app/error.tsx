@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@defraud/ui/components/button";
 
-import { errorDark, errorLight } from "@/assets";
+import { errorGraphic } from "@/assets";
 import { Footer, Navbar } from "@/components/layout";
 import { ThemeImage } from "@/components/misc";
 
@@ -49,8 +49,7 @@ const Error = ({ error, reset }: ErrorProps) => {
         </div>
 
         <ThemeImage
-          srcDark={errorDark}
-          srcLight={errorLight}
+          src={errorGraphic}
           alt="An Error Occurred"
           sizes="(min-width: 640px) 448px, 320px"
           className="mx-auto max-w-xs sm:max-w-md"

@@ -1,4 +1,4 @@
-# defraud [![GitHub Actions badge](https://github.com/jeremy-code/defraud/actions/workflows/ci.yml/badge.svg)](https://github.com/jeremy-code/defraud/actions/workflows/ci.yml) [![License](https://img.shields.io/github/license/jeremy-code/defraud)](LICENSE)
+# Defraud [![GitHub Actions badge](https://github.com/jeremy-code/defraud/actions/workflows/ci.yml/badge.svg)](https://github.com/jeremy-code/defraud/actions/workflows/ci.yml) [![License](https://img.shields.io/github/license/jeremy-code/defraud)](LICENSE)
 
 ## Installation
 

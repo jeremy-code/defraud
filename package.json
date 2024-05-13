@@ -1,11 +1,14 @@
 {
-  "name": "defraud",
+  "name": "Defraud",
   "description": "Defraud is a tool to help you identify and avoid scams",
   "version": "0.0.0",
   "private": true,
   "keywords": [
     "scam",
-    "defraud"
+    "defraud",
+    "security",
+    "fraud",
+    "privacy"
   ],
   "license": "MIT",
   "author": "Jeremy Nguyen <hi@jeremy.ng> (https://jeremy.ng)",
@@ -18,9 +21,6 @@
     "lint": "turbo lint",
     "format": "prettier . --write",
     "format:check": "prettier . --check"
-  },
-  "engines": {
-    "node": ">=18"
   },
   "devDependencies": {
     "@defraud/eslint-config": "workspace:*",

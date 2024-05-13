@@ -6,8 +6,10 @@ export type ThemeImageProps = Omit<
   // Lazy loading is required, otherwise, both images will be loaded
   "src" | "priority" | "loading"
 > & {
-  srcLight: ImageProps["src"];
-  srcDark: ImageProps["src"];
+  src: {
+    light: ImageProps["src"];
+    dark: ImageProps["src"];
+  };
 };
 
 /**
@@ -19,8 +21,7 @@ export type ThemeImageProps = Omit<
  * (prefers-color-scheme: dark), leading to conflicting styles.
  */
 export const ThemeImage = ({
-  srcLight,
-  srcDark,
+  src,
   alt,
   className,
   ...rest
@@ -28,7 +29,7 @@ export const ThemeImage = ({
   return (
     <>
       <Image
-        src={srcLight}
+        src={src.light}
         // explicitly passing props per
         // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-text.md#rule-options
         alt={`${alt} (light)`}
@@ -36,7 +37,7 @@ export const ThemeImage = ({
         {...rest}
       />
       <Image
-        src={srcDark}
+        src={src.dark}
         alt={`${alt} (dark)`}
         className={cn("hidden dark:block", className)}
         {...rest}

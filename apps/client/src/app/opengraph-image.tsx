@@ -28,7 +28,7 @@ const OpenGraphImage = async () => {
           style={{ gap: "1.5rem" }}
         >
           <Logo />
-          <p tw="text-6xl">defraud</p>
+          <p tw="text-6xl">Defraud</p>
         </div>
       </div>
     ),

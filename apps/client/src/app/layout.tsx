@@ -10,9 +10,9 @@ const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://defraud.io"),
-  title: { default: "defraud", template: "%s | defraud" },
+  title: { default: "Defraud", template: "%s | Defraud" },
   description: "Defraud is a tool to help you identify and avoid scams",
-  applicationName: "defraud",
+  applicationName: "Defraud",
   authors: { name: "Jeremy Nguyen", url: "https://jeremy.ng" },
   keywords: ["defraud", "scams", "fraud", "security", "privacy"],
   creator: "Jeremy Nguyen",
