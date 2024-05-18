@@ -2,8 +2,8 @@ import { dirname, join } from "node:path";
 import ui from "@defraud/ui/tailwind.config";
 import type { Config } from "tailwindcss";
 
-// directly assign types, so pnpm doesn't complain about the Tailwind plugin
-// types (e.g. tailwindcss-animate, etc.)
+// Directly assign Config type, so TypeScript doesn't complain about the
+// dependent Tailwind plugin types (e.g. tailwindcss-animate, etc.)
 const config: Config = {
   presets: [ui],
   content: [

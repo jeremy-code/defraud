@@ -10,6 +10,7 @@ const nextConfig = {
   logging: { fetches: { fullUrl: true } },
   transpilePackages: ["@defraud/database", "@defraud/ui"],
   experimental: {
+    reactCompiler: true,
     webpackBuildWorker: true,
   },
 };
