@@ -15,7 +15,7 @@ const noop = () => {};
  *
  * @see {@link https://react.dev/reference/react-dom/client/hydrateRoot#handling-different-client-and-server-content}
  */
-export const useMounted = () => {
+export const useIsMounted = () => {
   return useSyncExternalStore(
     () => noop,
     () => true,
