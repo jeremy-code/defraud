@@ -12,6 +12,8 @@ declare global {
   var db: NodePgDatabase<typeof schema> | undefined;
 }
 
+// Not using `src/utils/env.ts` as migration script is not run in the same
+// context (Next.js)
 const { DB_URL, NODE_ENV } = process.env;
 if (!DB_URL) throw new Error("DB_URL environment variable is not set");
 

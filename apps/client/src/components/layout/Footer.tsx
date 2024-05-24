@@ -1,4 +1,5 @@
 import type { ComponentProps } from "react";
+
 import { cn } from "@defraud/ui/utils";
 
 export const Footer = ({ className, ...rest }: ComponentProps<"footer">) => {

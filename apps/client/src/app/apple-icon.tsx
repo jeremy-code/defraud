@@ -16,12 +16,12 @@ const AppleIcon = () =>
         /**
          * @remarks
          *
-         * div must have explicit "display: flex" or "display: none" if it has
+         * div must have explicit `display: flex` or `display: none` if it has
          * more than one child node.
          *
          * @remarks
          *
-         * apple-touch-icon cannot have a transparent background, and defaults
+         * `apple-touch-icon` cannot have a transparent background and defaults
          * to black
          */
         tw={`flex w-[${size.width}px] h-[${size.height}px] bg-white p-8`}

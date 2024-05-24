@@ -21,8 +21,8 @@ module.exports = tseslint.config(
       ...next.configs.recommended.rules,
       /**
        * `@vercel/og` (which is bundled into Next.js) uses `tw` prop
-       * {@see https://github.com/vercel/next.js/blob/canary/packages/next/src/compiled/%40vercel/og/types.d.ts#L115}
-       * {@see https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md}
+       * @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/src/compiled/%40vercel/og/types.d.ts#L115}
+       * @see {@link https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md}
        */
       "react/no-unknown-property": ["error", { ignore: ["tw"] }],
     },

@@ -16,9 +16,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
+      CF_TURNSTILE_SECRET_KEY: ${{ secrets.CF_TURNSTILE_SECRET_KEY }}
       DB_URL: ${{ secrets.DB_URL }}
-      NEXT_TELEMETRY_DISABLED: 1
-      DO_NOT_TRACK: 1
+      KV_URL: ${{ secrets.KV_URL }}
+      NEXT_PUBLIC_CF_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_CF_TURNSTILE_SITE_KEY }}
 
     steps:
       - name: Check out code

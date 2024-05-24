@@ -23,7 +23,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
     /**
      * @remarks
      * `suppressHydrationWarning` is necessary since html element is updated by
-     * next-themes for dark mode — property only applies one level deep, so
+     * `next-themes` for dark mode — property only applies one level deep, so
      * hydration warnings won't be blocked on children elements
      */
     <html lang="en" className={lexend.className} suppressHydrationWarning>

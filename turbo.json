@@ -1,7 +1,13 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local", "**/.env", ".env"],
-  "globalEnv": ["NODE_ENV", "DB_URL"],
+  "globalEnv": [
+    "NODE_ENV",
+    "CF_TURNSTILE_SECRET_KEY",
+    "DB_URL",
+    "KV_URL",
+    "NEXT_PUBLIC_*"
+  ],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],

@@ -2,11 +2,12 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { Button } from "@defraud/ui/components/button";
 
+import { Button } from "@defraud/ui/components/button";
 import { errorGraphic } from "@/assets";
 import { Footer, Navbar } from "@/components/layout";
 import { ThemeImage } from "@/components/misc";
+import { env } from "@/utils/env";
 
 type ErrorProps = {
   error: Error & { digest: string };
@@ -15,7 +16,7 @@ type ErrorProps = {
 
 const Error = ({ error, reset }: ErrorProps) => {
   useEffect(() => {
-    if (process.env.NODE_ENV === "development") {
+    if (env.NODE_ENV === "development") {
       console.error(error);
     }
   }, [error]);

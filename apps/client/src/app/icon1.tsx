@@ -1,8 +1,8 @@
 /**
  * @file In the case that SVG favicons are not supported, renders PNG icons.
- * Named `icon1.tsx` as `icon.svg` has priority.
+ * File is named `icon1.tsx`, so that `icon.svg` has priority.
  *
- * {@see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons}
+ * @see {@link https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons}
  */
 
 import { ImageResponse } from "next/og";
@@ -22,7 +22,7 @@ const SIZES = {
  * Only raster images like `image/png` is supported, hence
  * {@link file://./icon.svg} is its own file.
  *
- * {@see https://nextjs.org/docs/app/api-reference/functions/generate-image-metadata}
+ * @see {@link https://nextjs.org/docs/app/api-reference/functions/generate-image-metadata}
  */
 export const generateImageMetadata = () =>
   Object.entries(SIZES).map(([id, size]) => ({

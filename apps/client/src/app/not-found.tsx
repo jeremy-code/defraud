@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Button } from "@defraud/ui/components/button";
 import { ChevronLeft } from "lucide-react";
 
+import { Button } from "@defraud/ui/components/button";
 import { notFoundGraphic } from "@/assets";
 import { Footer, Navbar } from "@/components/layout";
 import { BackButton, ThemeImage } from "@/components/misc";

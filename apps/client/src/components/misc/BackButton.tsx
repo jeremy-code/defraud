@@ -1,10 +1,11 @@
 /**
- * @file Using router.back() requires its own client component, and using
- * window.history.back() is inconsistent
+ * @file Back button client component as a wrapper around `router.back()` (which
+ * must be used in a client component)
  */
 "use client";
 
 import { useRouter } from "next/navigation";
+
 import { Button, ButtonProps } from "@defraud/ui/components/button";
 
 export const BackButton = (props: ButtonProps) => {

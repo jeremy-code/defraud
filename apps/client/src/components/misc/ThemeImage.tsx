@@ -1,4 +1,5 @@
 import Image, { type ImageProps } from "next/image";
+
 import { cn } from "@defraud/ui/utils";
 
 export type ThemeImageProps = Omit<
@@ -13,12 +14,12 @@ export type ThemeImageProps = Omit<
 };
 
 /**
- * Correct usage for Light/Dark image switching per
+ * Correct usage for light/dark mode image switching per
  * {@link https://nextjs.org/docs/pages/api-reference/components/image#theme-detection-css}
  *
- * Using <picture>, <source>, and getImageProps() does not work since light/dark
- * mode is styled using data attributes and not media queries
- * (prefers-color-scheme: dark), leading to conflicting styles.
+ * Using `<picture>`, `<source>`, and `getImageProps()` does not work since
+ * light/dark mode is styled using data attributes (`data-theme`) and not media
+ * queries `(prefers-color-scheme: dark)`, leading to conflicting styles.
  */
 export const ThemeImage = ({
   src,
@@ -30,8 +31,6 @@ export const ThemeImage = ({
     <>
       <Image
         src={src.light}
-        // explicitly passing props per
-        // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-text.md#rule-options
         alt={`${alt} (light)`}
         className={cn("dark:hidden", className)}
         {...rest}

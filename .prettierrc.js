@@ -1,4 +1,4 @@
-/** @type {import('prettier').Config} */
+/** @type {import("@ianvs/prettier-plugin-sort-imports").PrettierConfig} */
 module.exports = {
   printWidth: 80,
   tabWidth: 2,
@@ -12,8 +12,10 @@ module.exports = {
   importOrder: [
     "^(react/(.*)$)|^(react$)",
     "^(next/(.*)$)|^(next$)",
+    "<BUILTIN_MODULES>",
     "<THIRD_PARTY_MODULES>",
     "",
+    "^@defraud/(.*)$",
     "^@/(.*)$",
     "^[./]",
   ],

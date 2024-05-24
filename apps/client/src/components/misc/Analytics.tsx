@@ -1,19 +1,23 @@
-import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
+import type { ComponentProps } from "react";
+import {
+  Analytics as VercelAnalytics,
+  type AnalyticsProps as VercelAnalyticsProps,
+} from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-// Shared props between VercelAnalytics and SpeedInsights
 type AnalyticsProps = {
-  debug?: boolean;
-  route?: string | null;
-  scriptsrc?: string;
-  endpoint?: string;
+  vercelAnalytics?: VercelAnalyticsProps;
+  speedInsights?: ComponentProps<typeof SpeedInsights>;
 };
 
-export const Analytics = (props: AnalyticsProps) => {
+export const Analytics = ({
+  vercelAnalytics,
+  speedInsights,
+}: AnalyticsProps) => {
   return (
     <>
-      <VercelAnalytics {...props} />
-      <SpeedInsights {...props} />
+      <VercelAnalytics {...vercelAnalytics} />
+      <SpeedInsights {...speedInsights} />
     </>
   );
 };
