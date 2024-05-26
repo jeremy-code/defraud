@@ -7,8 +7,8 @@ import { Skeleton } from "@defraud/ui/components/skeleton";
 import { cn } from "@defraud/ui/utils";
 import { env } from "@/utils/env";
 
-const CF_TURNSTILE_URL = `https://challenges.cloudflare.com/turnstile/v0/api.js?"${new URLSearchParams(
-  { render: "explicit" }, // Disable implicit rendering to render using next/script
+const CF_TURNSTILE_URL = `https://challenges.cloudflare.com/turnstile/v0/api.js?${new URLSearchParams(
+  { render: "explicit" }, // Disable implicit rendering to render using `next/script`
 ).toString()}`;
 
 export type CaptchaProps = {

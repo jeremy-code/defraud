@@ -6,7 +6,7 @@
 
 import { useRouter } from "next/navigation";
 
-import { Button, ButtonProps } from "@defraud/ui/components/button";
+import { Button, type ButtonProps } from "@defraud/ui/components/button";
 
 export const BackButton = (props: ButtonProps) => {
   const router = useRouter();

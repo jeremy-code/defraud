@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { HTTPError } from "ky";
 
 import { Button } from "@defraud/ui/components/button";
 import { errorGraphic } from "@/assets";
@@ -29,7 +30,10 @@ const Error = ({ error, reset }: ErrorProps) => {
             An Error Occurred
           </h1>
           <p className="mt-2 text-muted-foreground">
-            Unfortunately, an error has occurred while trying to load the page.
+            {error instanceof HTTPError ?
+              "Unfortunately, an error has occurred while fetching the requested resource from the server."
+            : "Unfortunately, an error has occurred while trying to load the page."
+            }
           </p>
           <p className="text-muted-foreground">
             {isOnline ?

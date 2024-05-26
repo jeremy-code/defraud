@@ -2,6 +2,14 @@
 
 import { useRef } from "react";
 
+/**
+ * Using an (inferred) type predicate fixes error where TypeScript claims
+ * `initialValue` is not callable since `T & Function` has no call signatures.
+ *
+ * @see {@link https://github.com/microsoft/TypeScript/issues/37663}
+ */
+const isFunction = (value: unknown) => typeof value === "function";
+
 const UNINITIALIZED = Symbol("UNINITIALIZED");
 
 /**
@@ -13,14 +21,7 @@ export const useOnce = <T,>(initialValue: T | (() => T)) => {
   const ref = useRef<T | typeof UNINITIALIZED>(UNINITIALIZED);
 
   if (ref.current === UNINITIALIZED) {
-    ref.current = typeof initialValue === "function" ?
-        /**
-         * Casting as () => T as otherwise, TypeScript errors with "type 'T &
-         * Function' has no call signatures."
-         * @see {@link https://github.com/microsoft/TypeScript/issues/37663}
-         */
-        (initialValue as () => T)()
-      : initialValue;
+    ref.current = isFunction(initialValue) ? initialValue() : initialValue;
   }
 
   return ref.current;
