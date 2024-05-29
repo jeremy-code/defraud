@@ -18,8 +18,12 @@ const nextConfig = {
   logging: { fetches: { fullUrl: true } },
   transpilePackages: ["@defraud/database", "@defraud/ui"],
   experimental: {
-    // Optimive imports for barrel files in component directories (i.e. '@/components/category')
-    optimizePackageImports: [...componentDirectories],
+    /**
+     * Optimive imports for barrel files (index.ts) in component directories
+     * (i.e. `@/components/category`).
+     * @see {@link https://nextjs.org/docs/app/api-reference/next-config-js/optimizePackageImports}
+     */
+    optimizePackageImports: [...componentDirectories, "@defraud/ui/components"],
     reactCompiler: true,
     webpackBuildWorker: true,
   },

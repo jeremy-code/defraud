@@ -28,7 +28,7 @@
     "react": "canary",
     "react-dom": "canary",
     "react-hook-form": "^7.51.5",
-    "swr": "^2.2.5",
+    "swr": "beta",
     "zod": "^3.23.8",
     "zustand": "^4.5.2"
   },

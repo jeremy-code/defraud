@@ -4,7 +4,10 @@ import animate from "tailwindcss-animate";
 import colors from "tailwindcss/colors";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
-export default {
+// Type annotation with `Partial<Config>` type is necessary, so that TypeScript
+// doesn't complain about the downstream Tailwind plugins external packages'
+// types (e.g. tailwindcss-animate) when added to `presets` array.
+const uiConfig: Partial<Config> = {
   darkMode: ["selector", "[data-theme='dark']"],
   theme: {
     container: {
@@ -72,7 +75,7 @@ export default {
           to: { height: "0" },
         },
         float: {
-          "0%, 100%": { transform: "translateY(-1rem)" },
+          "0%, 100%": { transform: "translateY(-1rem)" }, // equivalent to -translate-y-4
           "50%": { transform: "translateY(0)" },
         },
       },
@@ -84,4 +87,6 @@ export default {
     },
   },
   plugins: [animate, typography],
-} satisfies Partial<Config>;
+};
+
+export default uiConfig;

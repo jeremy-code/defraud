@@ -4,7 +4,7 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.tabSize": 2, // @see file://./../.prettierrc.js
+  "editor.tabSize": 2, // @see {@link file://./../.prettierrc.js}
   "eslint.experimental.useFlatConfig": true,
   "json.schemas": [
     {

@@ -16,8 +16,8 @@ const AppleIcon = () =>
         /**
          * @remarks
          *
-         * div must have explicit `display: flex` or `display: none` if it has
-         * more than one child node.
+         * `<div>` must have explicit `display: flex` or `display: none` if it has
+         * more than one child node in Satori.
          *
          * @remarks
          *

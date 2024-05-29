@@ -5,9 +5,8 @@ import * as SwitchPrimitives from "@radix-ui/react-switch";
 
 import { cn } from "../utils";
 
-const Switch = ({
+export const Switch = ({
   className,
-  ref,
   ...props
 }: ComponentPropsWithRef<typeof SwitchPrimitives.Root>) => (
   <SwitchPrimitives.Root
@@ -16,7 +15,6 @@ const Switch = ({
       className,
     )}
     {...props}
-    ref={ref}
   >
     <SwitchPrimitives.Thumb
       className={cn(
@@ -25,6 +23,3 @@ const Switch = ({
     />
   </SwitchPrimitives.Root>
 );
-Switch.displayName = SwitchPrimitives.Root.displayName;
-
-export { Switch };

@@ -1,6 +1,6 @@
 /**
  * @file Back button client component as a wrapper around `router.back()` (which
- * must be used in a client component)
+ * must be used in a client component).
  */
 "use client";
 

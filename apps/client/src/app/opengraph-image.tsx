@@ -9,23 +9,22 @@ export const size = {
   height: 630,
 };
 
-export const contentType = "image/png";
+// Satori doesn't support variable fonts and only supports TTF, OTF, and WOFF.
+// https://github.com/vercel/satori#fonts
+const lexendSemiBold = fetch(
+  "https://github.com/googlefonts/lexend/raw/main/fonts/lexend/ttf/Lexend-SemiBold.ttf",
+).then((res) => res.arrayBuffer());
 
 const OpenGraphImage = async () => {
-  // Satori doesn't support variable fonts and only supports TTF, OTF, and WOFF.
-  // Note: Next.js caches fetch calls in the server.
-  const lexendSemiBold = fetch(
-    "https://github.com/googlefonts/lexend/raw/main/fonts/lexend/ttf/Lexend-SemiBold.ttf",
-  ).then((res) => res.arrayBuffer());
-
   return new ImageResponse(
     (
       <div tw="flex h-full w-full items-center justify-center bg-white">
         <div
           tw="flex"
-          // Tailwind CSS flex gap classes seem to not work, see
+          // Tailwind CSS flex gap classes are currently not supported, though
+          // the actual CSS property is supported. See
           // https://github.com/vercel/satori/pull/513
-          style={{ gap: "1.5rem" }}
+          style={{ gap: "1.5rem" }} // sizes.6 (24px)
         >
           <Logo />
           <p tw="text-6xl">Defraud</p>

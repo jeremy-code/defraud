@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import type { Point } from "@/utils/math";
 
 /**
- * Returns the current mouse position relative to the viewport as an object with
- * `x` and `y` properties or `null` if no `mousemove` event has occurred (such
- * as on a touchscreen device).
+ * Returns the current mouse position relative to the viewport, either as a
+ * `Point` with `x` and `y` properties or `null` if no `mousemove` event has
+ * occurred (such as on a touchscreen device).
  */
 export const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState<Point | null>(null);

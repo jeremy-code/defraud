@@ -66,28 +66,17 @@
       @apply flex-[1_0_auto];
     }
 
-    & > footer,
-    & > header {
+    & > :is(header, footer) {
       @apply flex-none;
     }
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  dt,
-  blockquote,
-  figcaption {
+  :is(h1, h2, h3, h4, h5, h6, dt, blockquote, figcaption) {
     @apply text-balance;
     max-inline-size: 25ch;
   }
 
-  p,
-  dd,
-  li {
+  :is(p, dd, li) {
     @apply text-pretty;
     max-inline-size: 60ch;
   }

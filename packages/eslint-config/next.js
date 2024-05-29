@@ -5,7 +5,6 @@ const tseslint = require("typescript-eslint");
 
 const react = require("./react");
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
 module.exports = tseslint.config(
   {
     ignores: [".next"],

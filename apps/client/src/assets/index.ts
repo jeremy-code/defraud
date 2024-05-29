@@ -1,7 +1,7 @@
-import { default as errorDark } from "./error-dark.webp";
-import { default as errorLight } from "./error-light.webp";
-import { default as notFoundDark } from "./notFound-dark.webp";
-import { default as notFoundLight } from "./notFound-light.webp";
+import errorDark from "./error-dark.webp";
+import errorLight from "./error-light.webp";
+import notFoundDark from "./notFound-dark.webp";
+import notFoundLight from "./notFound-light.webp";
 
 export const errorGraphic = {
   light: errorLight,

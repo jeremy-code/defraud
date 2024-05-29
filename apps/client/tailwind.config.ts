@@ -3,9 +3,7 @@ import type { Config } from "tailwindcss";
 
 import ui from "@defraud/ui/tailwind.config";
 
-// Directly assign Config type, so TypeScript doesn't complain about the
-// dependent Tailwind plugin types (e.g. tailwindcss-animate, etc.)
-const config: Config = {
+export default {
   presets: [ui],
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -15,6 +13,4 @@ const config: Config = {
       "./src/**/*.{js,jsx,ts,tsx}",
     ),
   ],
-};
-
-export default config;
+} satisfies Config;

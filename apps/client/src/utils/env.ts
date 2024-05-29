@@ -5,7 +5,7 @@ import { TurnstileSecret } from "@/lib/captcha";
 
 export const env = createEnv({
   server: {
-    NODE_ENV: z.enum(["development", "production"]),
+    NODE_ENV: z.enum(["development", "production", "staging"]),
     CF_TURNSTILE_SECRET_KEY: TurnstileSecret,
     DB_URL: z.string().url(),
     KV_URL: z.string().url(),
@@ -17,6 +17,8 @@ export const env = createEnv({
    * Due to how Next.js bundles environment variables on Edge and Client, to
    * include them in the bundle, they must be manually passed to `runtimeEnv`.
    * Destructuring from `process.env` will not work.
+   *
+   * @see {@link https://nextjs.org/docs/app/building-your-application/configuring/environment-variables}
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
