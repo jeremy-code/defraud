@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import ky from "ky";
 
 import { Logo } from "@/components/misc/Logo";
 
@@ -11,9 +12,13 @@ export const size = {
 
 // Satori doesn't support variable fonts and only supports TTF, OTF, and WOFF.
 // https://github.com/vercel/satori#fonts
-const lexendSemiBold = fetch(
-  "https://github.com/googlefonts/lexend/raw/main/fonts/lexend/ttf/Lexend-SemiBold.ttf",
-).then((res) => res.arrayBuffer());
+const lexendSemiBold = ky(
+  "https://api.github.com/repos/googlefonts/lexend/contents/fonts/lexend/ttf/Lexend-SemiBold.ttf",
+  {
+    cache: "force-cache",
+    headers: { Accept: "application/vnd.github.raw+json" },
+  },
+).arrayBuffer();
 
 const OpenGraphImage = async () => {
   return new ImageResponse(

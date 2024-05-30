@@ -1,9 +1,10 @@
+import type { ComponentPropsWithoutRef } from "react";
 import Image, { type ImageProps } from "next/image";
 
 import { cn } from "@defraud/ui/utils";
 
 export type ThemeImageProps = Omit<
-  ImageProps,
+  ComponentPropsWithoutRef<typeof Image>,
   // Lazy loading is required, otherwise, both images will be loaded
   "src" | "priority" | "loading"
 > & {

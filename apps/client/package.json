@@ -12,7 +12,7 @@
   "dependencies": {
     "@defraud/database": "workspace:*",
     "@defraud/ui": "workspace:*",
-    "@next/bundle-analyzer": "canary",
+    "@next/bundle-analyzer": "rc",
     "@radix-ui/react-accessible-icon": "^1.0.3",
     "@radix-ui/react-switch": "^1.0.3",
     "@t3-oss/env-nextjs": "^0.10.1",
@@ -23,10 +23,10 @@
     "keyv": "^4.5.4",
     "ky": "^1.2.4",
     "lucide-react": "^0.379.0",
-    "next": "canary",
+    "next": "rc",
     "next-themes": "^0.3.0",
-    "react": "canary",
-    "react-dom": "canary",
+    "react": "rc",
+    "react-dom": "rc",
     "react-hook-form": "^7.51.5",
     "swr": "beta",
     "zod": "^3.23.8",
@@ -37,14 +37,14 @@
     "@defraud/tsconfig": "workspace:*",
     "@keyv/redis": "^2.8.5",
     "@types/cloudflare-turnstile": "^0.1.5",
-    "@types/node": "^20.12.12",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
+    "@types/node": "^20.12.13",
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc",
     "autoprefixer": "^10.4.19",
     "babel-plugin-react-compiler": "0.0.0-experimental-592953e-20240517",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.5.0-beta"
+    "typescript": "beta"
   }
 }
