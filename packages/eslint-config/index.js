@@ -1,16 +1,11 @@
 const eslint = require("@eslint/js");
 const globals = require("globals");
 const tseslint = require("typescript-eslint");
-const turbo = require("eslint-plugin-turbo");
 
 module.exports = tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   {
-    plugins: { turbo },
-    rules: {
-      ...turbo.configs.recommended.rules,
-    },
     languageOptions: {
       parserOptions: {
         /**
@@ -23,9 +18,6 @@ module.exports = tseslint.config(
       globals: {
         ...globals.node,
       },
-    },
-    settings: {
-      ...turbo.configs.recommended.settings,
     },
   },
   {

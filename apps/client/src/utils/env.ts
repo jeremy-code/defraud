@@ -5,7 +5,8 @@ import { TurnstileSecret } from "@/lib/captcha";
 
 export const env = createEnv({
   server: {
-    NODE_ENV: z.enum(["development", "production", "staging"]),
+    // https://nextjs.org/docs/messages/non-standard-node-env
+    NODE_ENV: z.enum(["development", "production", "test"]),
     CF_TURNSTILE_SECRET_KEY: TurnstileSecret,
     DB_URL: z.string().url(),
     KV_URL: z.string().url(),

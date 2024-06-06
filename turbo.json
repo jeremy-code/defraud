@@ -1,14 +1,7 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local", "**/.env", ".env"],
-  "globalEnv": [
-    "NODE_ENV",
-    "CF_TURNSTILE_SECRET_KEY",
-    "DB_URL",
-    "KV_URL",
-    "NEXT_PUBLIC_*"
-  ],
-  "pipeline": {
+  "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "env": ["ANALYZE"],
@@ -25,7 +18,8 @@
       "cache": false
     },
     "db:migrate": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     }
   }
 }

@@ -16,7 +16,6 @@ const componentDirectories = (
 const nextConfig = {
   poweredByHeader: false,
   logging: { fetches: { fullUrl: true } },
-  transpilePackages: ["@defraud/database", "@defraud/ui"],
   experimental: {
     /**
      * Optimive imports for barrel files (index.ts) in component directories
