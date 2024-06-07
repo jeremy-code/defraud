@@ -6,6 +6,7 @@
   "editor.formatOnSave": true,
   "editor.tabSize": 2, // @see {@link file://./../.prettierrc.js}
   "eslint.experimental.useFlatConfig": true,
+  "eslint.workingDirectories": [{ "mode": "auto" }],
   "json.schemas": [
     {
       "fileMatch": [

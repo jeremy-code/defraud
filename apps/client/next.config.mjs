@@ -23,6 +23,7 @@ const nextConfig = {
      * @see {@link https://nextjs.org/docs/app/api-reference/next-config-js/optimizePackageImports}
      */
     optimizePackageImports: [...componentDirectories, "@defraud/ui/components"],
+    ppr: true,
     reactCompiler: true,
     webpackBuildWorker: true,
   },

@@ -4,8 +4,8 @@
   "private": true,
   "files": [
     "index.js",
-    "react.js",
-    "next.js"
+    "next.js",
+    "react.js"
   ],
   "devDependencies": {
     "@next/eslint-plugin-next": "rc",
@@ -17,8 +17,8 @@
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-compiler": "0.0.0-experimental-51a85ea-20240601",
     "eslint-plugin-react-hooks": "rc",
-    "globals": "^15.3.0",
-    "typescript": "beta",
+    "globals": "^15.4.0",
+    "typescript": "rc",
     "typescript-eslint": "^7.12.0"
   }
 }
