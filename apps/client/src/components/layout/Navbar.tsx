@@ -15,9 +15,12 @@ export const Navbar = ({ className, ...rest }: ComponentProps<"header">) => {
           <span className="font-semibold">Defraud</span>
         </Link>
         <nav className="flex items-center gap-4">
-          <Button variant="secondary">
-            <Link href="/login">Login</Link>
-          </Button>
+          <Link href="/signin">
+            <Button variant="ghost">Sign in</Button>
+          </Link>
+          <Link href="/signup">
+            <Button variant="secondary">Sign up</Button>
+          </Link>
           <ThemeToggle />
         </nav>
       </div>

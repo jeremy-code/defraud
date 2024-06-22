@@ -51,10 +51,6 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   html {
     @apply h-full antialiased;
   }

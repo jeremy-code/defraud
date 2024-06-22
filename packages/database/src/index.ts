@@ -12,10 +12,6 @@ declare global {
   var db: NodePgDatabase<typeof schema> | undefined;
 }
 
-if (!process.env.DB_URL) {
-  throw new Error("DB_URL environment variable is not defined");
-}
-
 const drizzleSingleton = () =>
   drizzle(new Pool({ connectionString: process.env.DB_URL }), {
     logger: process.env.NODE_ENV === "development",

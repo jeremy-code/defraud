@@ -24,7 +24,7 @@ export const calculateAngle = (startPoint: Point, endPoint: Point) => {
 /**
  * Returns the center of an `Element` relative to the viewport as a
  * {@link Point} with `x` and `y` coordinates given by
- * `getBoundingClientRect()`.
+ * {@link Element.getBoundingClientRect}.
  *
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect}
  */
@@ -39,6 +39,6 @@ export const calculateElementCenter = (element: Element): Point => {
 
 /**
  * The number of radians in a turn. 1 turn = 2π (τ) radians.
- * @see {@link https://en.wikipedia.org/wiki/Turn_(angle)#Unit_conversion } Turn (angle) - Wikipedia
+ * @see {@link https://en.wikipedia.org/wiki/Turn_(angle)#Unit_conversion} Turn (angle) - Wikipedia
  */
 export const RADIANS_IN_TURN = 2 * Math.PI;

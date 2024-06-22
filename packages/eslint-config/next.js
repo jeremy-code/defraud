@@ -1,4 +1,5 @@
 const next = require("@next/eslint-plugin-next");
+const drizzle = require("eslint-plugin-drizzle");
 const eslintImport = require("eslint-plugin-import");
 const jsxA11y = require("eslint-plugin-jsx-a11y");
 const tseslint = require("typescript-eslint");
@@ -12,12 +13,14 @@ module.exports = tseslint.config(
   ...react,
   {
     plugins: {
+      "@next/next": next,
+      drizzle,
       import: eslintImport,
       "jsx-a11y": jsxA11y,
-      "@next/next": next,
     },
     rules: {
       ...next.configs.recommended.rules,
+      ...drizzle.configs.recommended.rules,
       /**
        * `@vercel/og` (which is bundled into Next.js) uses `tw` prop
        * @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/src/compiled/%40vercel/og/types.d.ts#L115}

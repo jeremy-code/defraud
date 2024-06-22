@@ -24,7 +24,8 @@ const AppleIcon = () =>
          * `apple-touch-icon` cannot have a transparent background and defaults
          * to black
          */
-        tw={`flex w-[${size.width}px] h-[${size.height}px] bg-white p-8`}
+        tw="flex bg-white p-8"
+        style={{ width: `${size.width}px`, height: `${size.height}px` }}
       >
         <Logo width="100%" height="100%" />
       </div>

@@ -15,9 +15,11 @@ const uiConfig: Partial<Config> = {
       padding: "1rem", // sizes.4 (16px)
     },
     extend: {
+      borderColor: {
+        DEFAULT: "hsl(var(--border))",
+      },
       colors: {
         gray: colors.stone,
-        border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",

@@ -9,7 +9,7 @@ const componentDirectories = (
   await readdir("src/components", { withFileTypes: true })
 ).reduce(
   (acc, d) => (d.isDirectory() ? [...acc, `@/components/${d.name}`] : acc),
-  [],
+  /** @type {string[]} */ ([]),
 );
 
 /** @type {import('next').NextConfig} */

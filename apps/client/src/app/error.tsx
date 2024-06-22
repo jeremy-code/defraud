@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { HTTPError } from "ky";
+import { AuthError } from "next-auth";
 
 import { Button } from "@defraud/ui/components/button";
 import { errorGraphic } from "@/assets";
@@ -32,6 +33,8 @@ const Error = ({ error, reset }: ErrorProps) => {
           <p className="mt-2 text-muted-foreground">
             {error instanceof HTTPError ?
               "Unfortunately, an error has occurred while fetching the requested resource from the server."
+            : error instanceof AuthError ?
+              "Unfortunately, an error has occurred while trying to authenticate your request."
             : "Unfortunately, an error has occurred while trying to load the page."
             }
           </p>

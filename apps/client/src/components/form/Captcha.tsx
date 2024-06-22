@@ -34,7 +34,14 @@ export const Captcha = ({ params, className, ...rest }: CaptchaProps) => {
       <div
         ref={captchaRef}
         // Dimensions from https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/#widget-size
-        className={cn("relative h-[65px] w-[300px]", className)}
+        className={cn(
+          "relative h-[65px] w-[300px]",
+          {
+            "h-[50px] w-[250px]": params?.size === "compact",
+            "h-0 w-0": params?.size === "invisible",
+          },
+          className,
+        )}
         {...rest}
       >
         <Skeleton className="absolute inset-0 rounded-none" />
