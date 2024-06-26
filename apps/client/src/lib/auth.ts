@@ -15,9 +15,9 @@ const providers: Provider[] = [
   Discord,
 ];
 
-export type ProviderDetail = CommonProviderOptions;
+export type ProviderRecord = CommonProviderOptions;
 
-export const providerDetails = providers.map<ProviderDetail>((provider) => {
+export const providerRecords = providers.map<ProviderRecord>((provider) => {
   const { id, name, type } =
     typeof provider === "function" ? provider() : provider;
   return { id, name, type };

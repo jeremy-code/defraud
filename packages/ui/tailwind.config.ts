@@ -1,13 +1,13 @@
 import typography from "@tailwindcss/typography";
-import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 import colors from "tailwindcss/colors";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import type { PresetsConfig } from "tailwindcss/types/config";
 
-// Type annotation with `Partial<Config>` type is necessary, so that TypeScript
+// Type annotation with `PresetsConfig` type is necessary, so that TypeScript
 // doesn't complain about the downstream Tailwind plugins external packages'
 // types (e.g. tailwindcss-animate) when added to `presets` array.
-const uiConfig: Partial<Config> = {
+const uiConfig: PresetsConfig = {
   darkMode: ["selector", "[data-theme='dark']"],
   theme: {
     container: {

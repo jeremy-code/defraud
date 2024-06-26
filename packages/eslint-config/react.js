@@ -10,6 +10,7 @@ const base = require(".");
 module.exports = tseslint.config(
   ...base,
   ...tailwind.configs["flat/recommended"],
+
   {
     plugins: {
       react,
@@ -54,7 +55,6 @@ module.exports = tseslint.config(
       },
       tailwindcss: {
         callees: ["classnames", "clsx", "cn", "cva"],
-        classRegex: "^class(Name)?|tw$", // `tw` for Satori
         config: "./tailwind.config.ts",
       },
     },

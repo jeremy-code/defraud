@@ -1,3 +1,5 @@
+import { headers } from "next/headers";
+
 import {
   Card,
   CardContent,
@@ -8,6 +10,8 @@ import {
 import { Logo } from "@/components/misc";
 
 const VerifyRequest = () => {
+  const host = headers().get("host");
+
   return (
     <main className="grid place-content-center gap-8">
       <Logo className="mx-auto size-14" />
@@ -28,7 +32,11 @@ const VerifyRequest = () => {
             >
               no-reply@defraud.io
             </a>
-            {"."}
+            {" with subject: "}
+            <code className="overflow-x-scroll whitespace-pre rounded bg-background p-1">
+              {"Sign in to "}
+              <span className="font-semibold">{host ?? "Unknown host"}</span>
+            </code>
           </p>
           <p className="leading-relaxed tracking-tight">
             {"If you don't receive an email, please check your spam folder."}

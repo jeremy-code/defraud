@@ -1,11 +1,11 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { Button, type ButtonProps } from "@defraud/ui/components";
-import { type ProviderDetail } from "@/lib/auth";
+import type { ProviderRecord } from "@/lib/auth";
 import { OAuthIcon } from "./OAuthIcon";
 
 const oAuthButtonVariants = cva<{
-  id: Record<ProviderDetail["id"], string>;
+  id: Record<ProviderRecord["id"], string>;
 }>(undefined, {
   variants: {
     id: {
@@ -16,7 +16,8 @@ const oAuthButtonVariants = cva<{
   },
 });
 
-type OAuthButtonProps = ButtonProps & VariantProps<typeof oAuthButtonVariants>;
+type OAuthButtonProps = Required<VariantProps<typeof oAuthButtonVariants>> &
+  ButtonProps;
 
 export const OAuthButton = ({
   id,

@@ -11,7 +11,7 @@ import { ThemeImage } from "@/components/misc";
 import { useIsOnline } from "@/hooks/useIsOnline";
 
 type ErrorProps = {
-  error: Error & { digest: string };
+  error: Error & { digest?: string };
   reset: () => void;
 };
 
@@ -24,9 +24,11 @@ const Error = ({ error, reset }: ErrorProps) => {
       <Navbar />
       <main className="container flex flex-col-reverse items-center justify-center gap-12 py-4 lg:flex-row">
         <div className="flex flex-col gap-2">
-          <p className="text-sm italic text-muted-foreground/60">
-            ID: {error.digest}
-          </p>
+          {error.digest && (
+            <p className="text-sm italic text-muted-foreground/60">
+              ID: {error.digest}
+            </p>
+          )}
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
             An Error Occurred
           </h1>

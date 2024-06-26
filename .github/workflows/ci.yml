@@ -47,7 +47,7 @@ jobs:
             ${{ steps.get-store-path.outputs.STORE_PATH }}
             ${{ github.workspace }}/apps/*/.next/cache
           key: nextjs-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
-          restore-keys: nextjs-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}-
+          restore-keys: nextjs-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Install dependencies
         run: pnpm install

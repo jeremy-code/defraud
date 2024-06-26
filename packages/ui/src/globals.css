@@ -21,8 +21,8 @@
     --accent-foreground: 24 9.8% 10%;        /* stone.900 */
     --destructive: 0 72.22% 50.59%;          /* red.600 */
     --destructive-foreground: 60 9.1% 97.8%; /* stone.50 */
-    --border: 20 5.9% 90%;                   /* stone.200 */
-    --input: 20 5.9% 90%;                    /* stone.200 */
+    --border: 24 5.7% 82.9%;                 /* stone.300 */
+    --input: 24 5.7% 82.9%;                  /* stone.300 */
     --ring: 24 5.4% 63.9%;                   /* stone.400 */
   }
 

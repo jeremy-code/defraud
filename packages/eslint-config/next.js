@@ -40,6 +40,9 @@ module.exports = tseslint.config(
           alwaysTryTypes: true,
         },
       },
+      tailwindcss: {
+        classRegex: "^class(Name)?|tw$", // `tw` for Satori
+      },
     },
   },
 );

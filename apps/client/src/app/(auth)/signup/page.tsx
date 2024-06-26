@@ -11,21 +11,20 @@ import {
   Label,
 } from "@defraud/ui/components";
 import { Logo } from "@/components/misc/Logo";
-import { providerDetails, signIn, type ProviderDetail } from "@/lib/auth";
+import { providerRecords, signIn, type ProviderRecord } from "@/lib/auth";
 import { OAuthButton } from "../_components/OAuthButton";
 
-const SignUpForm = ({ id, name, type }: ProviderDetail) => {
+const SignUpForm = ({ id, name, type }: ProviderRecord) => {
+  const signUpAction = async (formData: FormData) => {
+    "use server";
+    await signIn(id, formData);
+  };
+
   switch (type) {
     case "email":
       return (
         <>
-          <form
-            className="flex flex-col gap-2"
-            action={async (formData) => {
-              "use server";
-              await signIn(id, formData);
-            }}
-          >
+          <form className="flex flex-col gap-2" action={signUpAction}>
             <Label htmlFor="email">Email</Label>
             <Input
               type="email"
@@ -49,13 +48,7 @@ const SignUpForm = ({ id, name, type }: ProviderDetail) => {
       );
     case "oauth":
       return (
-        <form
-          className="flex flex-col"
-          action={async (formData) => {
-            "use server";
-            await signIn(id, formData);
-          }}
-        >
+        <form className="flex flex-col" action={signUpAction}>
           <OAuthButton type="submit" id={id}>
             Sign up with {name}
           </OAuthButton>
@@ -78,7 +71,7 @@ const SignUp = () => {
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
-          {providerDetails.map((provider) => (
+          {providerRecords.map((provider) => (
             <SignUpForm key={provider.id} {...provider} />
           ))}
         </CardContent>
