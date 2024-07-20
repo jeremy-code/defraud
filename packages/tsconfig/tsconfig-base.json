@@ -1,17 +1,32 @@
 {
   "display": "Default",
   "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+    /* Projects */
     "incremental": false,
+
+    /* Language and Environment */
     "target": "ES2022",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "moduleDetection": "force",
+
+    /* Modules */
     "module": "NodeNext",
     "resolveJsonModule": true,
+
+    /* Interop Constraints */
+    "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+
+    /* Type Checking */
     "strict": true,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    /* Completeness */
     "skipLibCheck": true
   },
   "include": ["${configDir}/**/*.ts", "${configDir}/**/*.tsx"]

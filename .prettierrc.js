@@ -1,4 +1,4 @@
-/** @type {import("@ianvs/prettier-plugin-sort-imports").PrettierConfig} */
+/** @type {import("prettier").Config} */
 module.exports = {
   printWidth: 80,
   tabWidth: 2,
@@ -10,16 +10,16 @@ module.exports = {
     "prettier-plugin-tailwindcss",
   ],
   importOrder: [
-    "^(react/(.*)$)|^(react$)",
-    "^(next/(.*)$)|^(next$)",
+    "^react(?:$|/(.*)$)", // "react" or "react/*"
+    "^next(?:$|/(.*)$)", // "next" or "next/*"
     "<BUILTIN_MODULES>",
     "<THIRD_PARTY_MODULES>",
     "",
-    "^@defraud/(.*)$",
-    "^@/(.*)$",
-    "^[./]",
+    "^@defraud/(.*)$", // Internal monorepo packages
+    "^@/(.*)$", // Absolute imports
+    "^[./]", // Relative imports
   ],
-  // tailwindConfig is resolved relative to .prettierrc.js
+  // Tailwind CSS config is resolved relative to `.prettierrc.js`
   tailwindConfig: "./apps/client/tailwind.config.ts",
   tailwindAttributes: ["tw"], // for Satori
   tailwindFunctions: ["classnames", "clsx", "cn", "cva"],

@@ -2,6 +2,7 @@ import { ImageResponse } from "next/og";
 
 import { Logo } from "@/components/misc/Logo";
 
+// See https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes
 export const size = {
   width: 180,
   height: 180,

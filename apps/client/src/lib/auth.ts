@@ -9,7 +9,7 @@ import { db } from "@defraud/database";
 
 const providers: Provider[] = [
   Sendgrid({
-    from: "no-reply@defraud.io",
+    from: "Jeremy <no-reply@defraud.io>",
   }),
   GitHub,
   Discord,

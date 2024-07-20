@@ -7,15 +7,13 @@
   "editor.tabSize": 2, // @see {@link file://./../.prettierrc.js}
   "eslint.useFlatConfig": true,
   "eslint.workingDirectories": [{ "mode": "auto" }],
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "packages/tsconfig/*.json",
-        "!packages/tsconfig/package.json"
-      ],
-      "url": "https://json.schemastore.org/tsconfig"
-    }
-  ],
-  "typescript.enablePromptUseWorkspaceTsdk": true, // Use the workspace version of TypeScript (useful for Next.js)
+  "files.associations": {
+    "*.css": "tailwindcss" // @see {@link https://github.com/tailwindlabs/tailwindcss-intellisense#filesassociations}
+  },
+  "tailwindCSS.experimental.configFile": {
+    "apps/client/tailwind.config.ts": "apps/client/**",
+    "packages/ui/tailwind.config.ts": "packages/ui/**"
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true, // Use the workspace TypeScript version (useful for Next.js)
   "typescript.tsdk": "./node_modules/typescript/lib"
 }

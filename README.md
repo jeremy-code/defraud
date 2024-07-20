@@ -14,7 +14,7 @@
   </a>
 </p>
 
-> Defraud is a web application that allows user to learn about scams, and how to avoid them.
+> Defraud is a web application that allows users to learn about scams and how to avoid them.
 
 ## Installation
 
@@ -28,13 +28,13 @@ pnpm install
 ## Usage
 
 ```shell
-# Set Node.js version
+# Set Node.js version to the one specified in .nvmrc
 nvm use
 
 # Run the development server locally
 pnpm dev
 
-# Lint and format code
+# Lint and format code with ESLint and Prettier
 pnpm lint
 pnpm format
 

@@ -39,7 +39,10 @@ export const ThemeImage = ({
       <Image
         src={src.dark}
         alt={`${alt} (dark)`}
-        className={cn("hidden dark:block", className)}
+        className={cn(
+          "[&:not(:where([data-theme='dark'],[data-theme='dark']_*))]:hidden",
+          className,
+        )}
         {...rest}
       />
     </>

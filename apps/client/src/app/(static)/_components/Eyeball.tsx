@@ -27,19 +27,14 @@ export const Eyeball = ({
     : 0; // Default to 0 radians if ref or mousePosition is null
 
   return (
-    <div ref={ref} className={cn("absolute inset-0", className)} {...rest}>
+    <div ref={ref} className={cn("size-full", className)} {...rest}>
       <div
         // Using `offset-path` to animate the eyeball along an ellipse half the
         // size of its parent, based on the angle. Using transform properties
         // (e.g. `rotate()`) would be simpler, but has performance limitations
-        // (and in my opinion, less understandable).
-        className="h-16 w-28 rounded-[50%] bg-gray-900 [offset:ellipse(25%_25%)] dark:bg-gray-800"
-        style={
-          {
-            offsetDistance: "calc(var(--turns) * 100%)", // Convert turns to percentage (1 turn = 100%)
-            "--turns": angleInRadians / RADIANS_IN_TURN, // Convert radians to turns (2π radians = 1 turn)
-          } as CSSProperties
-        }
+        // (and in my opinion, is less understandable).
+        className="aspect-[2] w-1/2 rounded-[50%] bg-gray-900 [offset:ellipse(25%_25%)_calc(var(--turns)*100%)] dark:bg-gray-800"
+        style={{ "--turns": angleInRadians / RADIANS_IN_TURN } as CSSProperties} // Convert radians to turns (2π radians = 1 turn)
       />
     </div>
   );

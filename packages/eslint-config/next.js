@@ -1,7 +1,6 @@
 const next = require("@next/eslint-plugin-next");
 const drizzle = require("eslint-plugin-drizzle");
 const eslintImport = require("eslint-plugin-import");
-const jsxA11y = require("eslint-plugin-jsx-a11y");
 const tseslint = require("typescript-eslint");
 
 const react = require("./react");
@@ -16,7 +15,6 @@ module.exports = tseslint.config(
       "@next/next": next,
       drizzle,
       import: eslintImport,
-      "jsx-a11y": jsxA11y,
     },
     rules: {
       ...next.configs.recommended.rules,
@@ -39,6 +37,10 @@ module.exports = tseslint.config(
         "eslint-import-resolver-typescript": {
           alwaysTryTypes: true,
         },
+      },
+      react: {
+        // See https://github.com/jsx-eslint/eslint-plugin-react/blob/master/lib/util/linkComponents.js#L33
+        linkComponents: [{ name: "Link", linkAttribute: "href" }],
       },
       tailwindcss: {
         classRegex: "^class(Name)?|tw$", // `tw` for Satori

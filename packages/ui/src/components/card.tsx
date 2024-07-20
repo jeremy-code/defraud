@@ -1,4 +1,3 @@
-import * as React from "react";
 import type { ComponentPropsWithRef } from "react";
 
 import { cn } from "../utils";
@@ -11,7 +10,7 @@ export const Card = ({
   <div
     ref={ref}
     className={cn(
-      "rounded-xl border bg-card text-card-foreground shadow",
+      "rounded-xl border bg-card text-card-foreground shadow-sm",
       className,
     )}
     {...props}
@@ -33,13 +32,16 @@ export const CardHeader = ({
 export const CardTitle = ({
   className,
   ref,
+  children,
   ...props
 }: ComponentPropsWithRef<"h3">) => (
   <h3
     ref={ref}
     className={cn("font-semibold leading-none tracking-tight", className)}
     {...props}
-  />
+  >
+    {children}
+  </h3>
 );
 
 export const CardDescription = ({

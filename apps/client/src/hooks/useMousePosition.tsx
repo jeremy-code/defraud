@@ -11,9 +11,7 @@ export const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState<Point | null>(null);
 
   useEffect(() => {
-    // TODO: Wrap in `useEffectEvent`. Currently, it throws error `TypeError:
-    // react__WEBPACK_IMPORTED_MODULE_1__.experimental_useEffectEvent is not a
-    // function`
+    // TODO: Wrap in `useEffectEvent` when it is no longer experimental.
     const onMouseMove = (ev: MouseEvent) => {
       setMousePosition({ x: ev.clientX, y: ev.clientY });
     };

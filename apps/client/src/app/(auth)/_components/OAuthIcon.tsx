@@ -1,8 +1,8 @@
-import type { SVGProps } from "react";
+import type { FunctionComponent, SVGProps } from "react";
 import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
 import { cva, type VariantProps } from "class-variance-authority";
 
-import type { ProviderRecord } from "@/lib/auth";
+import { providerRecords, type ProviderRecord } from "@/lib/auth";
 
 const oAuthIconVariants = cva<{
   id: Record<ProviderRecord["id"], string>;
@@ -14,9 +14,6 @@ const oAuthIconVariants = cva<{
     },
   },
 });
-
-type OAuthIconProps = Required<VariantProps<typeof oAuthIconVariants>> &
-  SVGProps<SVGSVGElement>;
 
 const GithubIcon = (props: SVGProps<SVGSVGElement>) => (
   // Taken from https://github.com/logos
@@ -36,14 +33,25 @@ const DiscordIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const OAuthIcon = ({ id, className, ...props }: OAuthIconProps) => {
-  const Icon =
-    id === "github" ? GithubIcon
-    : id === "discord" ? DiscordIcon
-    : null;
+const iconMap: Record<
+  ProviderRecord["id"],
+  FunctionComponent<SVGProps<SVGSVGElement>>
+> = {
+  github: GithubIcon,
+  discord: DiscordIcon,
+};
 
-  if (Icon === null) {
-    throw new Error(`Unknown OAuth provider: ${id}`);
+type OAuthIconProps = Required<VariantProps<typeof oAuthIconVariants>> &
+  SVGProps<SVGSVGElement>;
+
+export const OAuthIcon = ({ id, className, ...props }: OAuthIconProps) => {
+  const Icon = iconMap[id];
+  if (Icon === undefined) {
+    throw new RangeError(
+      `The OAuth provider ID should be one of ${new Intl.ListFormat(undefined, {
+        type: "disjunction", // "A, B, or C"
+      }).format(providerRecords.map((record) => record.id))}.`,
+    );
   }
 
   return (

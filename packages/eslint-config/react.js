@@ -1,6 +1,8 @@
-const react = require("eslint-plugin-react");
+const jsxA11y = require("eslint-plugin-jsx-a11y");
 const reactCompiler = require("eslint-plugin-react-compiler");
 const reactHooks = require("eslint-plugin-react-hooks");
+const reactRecommended = require("eslint-plugin-react/configs/recommended");
+const reactJsxRuntime = require("eslint-plugin-react/configs/jsx-runtime");
 const tailwind = require("eslint-plugin-tailwindcss");
 const globals = require("globals");
 const tseslint = require("typescript-eslint");
@@ -10,32 +12,29 @@ const base = require(".");
 module.exports = tseslint.config(
   ...base,
   ...tailwind.configs["flat/recommended"],
-
+  jsxA11y.flatConfigs.recommended,
+  reactRecommended,
+  reactJsxRuntime,
   {
     plugins: {
-      react,
       "react-compiler": reactCompiler,
       "react-hooks": reactHooks,
     },
     rules: {
-      ...react.configs.recommended.rules,
-      ...react.configs["jsx-runtime"].rules,
       ...reactHooks.configs.recommended.rules,
       "@typescript-eslint/no-misused-promises": [
         "error",
         {
           checksVoidReturn: {
             /**
-             * Server actions must be async functions and can be used in
-             * `action` and `onSubmit` props, which return `void`. This triggers
-             * `no-misused-promises`. However, making it a synchronous function
-             * throws error "Functions cannot be directly passed unless
-             * explicitly exposed with 'use server'". Hence, this rule is
-             * disabled for JSX attributes.
+             * Server actions must be async functions and may be passed to
+             * `action` and `onSubmit` props, which return `void` and not
+             * `Promise<void>`. This triggers `no-misused-promises`. However,
+             * making it a synchronous function throws error "Functions cannot
+             * be directly passed unless explicitly exposed with 'use server'".
              *
-             * {@link https://typescript-eslint.io/rules/no-misused-promises/#checksvoidreturn}
-             * {@link https://react.dev/reference/rsc/server-actions}
-             * {@link https://github.com/typescript-eslint/typescript-eslint/pull/4623}
+             * @see {@link https://typescript-eslint.io/rules/no-misused-promises/#checksvoidreturn}
+             * @see {@link https://react.dev/reference/rsc/server-actions}
              */
             attributes: false,
           },
@@ -55,7 +54,6 @@ module.exports = tseslint.config(
       },
       tailwindcss: {
         callees: ["classnames", "clsx", "cn", "cva"],
-        config: "./tailwind.config.ts",
       },
     },
   },

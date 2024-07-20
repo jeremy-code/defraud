@@ -1,8 +1,9 @@
 import "@defraud/ui/globals.css";
 
 import type { ReactNode } from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Lexend } from "next/font/google";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { Analytics, AppProvider } from "@/components/misc";
 
@@ -15,7 +16,17 @@ export const metadata: Metadata = {
   applicationName: "Defraud",
   authors: { name: "Jeremy Nguyen", url: "https://jeremy.ng" },
   keywords: ["defraud", "scams", "fraud", "security", "privacy"],
+  referrer: "origin-when-cross-origin",
   creator: "Jeremy Nguyen",
+  publisher: "Defraud",
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "hsl(20 14.3% 4.1%)" },
+  ],
+  colorScheme: "dark light",
 };
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
@@ -31,6 +42,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         <AppProvider>
           {children}
           <Analytics />
+          <ReactQueryDevtools />
         </AppProvider>
       </body>
     </html>

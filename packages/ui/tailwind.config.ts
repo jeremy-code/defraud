@@ -5,9 +5,10 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import type { PresetsConfig } from "tailwindcss/types/config";
 
 // Type annotation with `PresetsConfig` type is necessary, so that TypeScript
-// doesn't complain about the downstream Tailwind plugins external packages'
-// types (e.g. tailwindcss-animate) when added to `presets` array.
+// doesn't complain about the Tailwind plugins external dependencies' types
+// (e.g. tailwindcss-animate).
 const uiConfig: PresetsConfig = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: ["selector", "[data-theme='dark']"],
   theme: {
     container: {

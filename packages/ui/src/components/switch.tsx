@@ -5,7 +5,7 @@ import * as SwitchPrimitives from "@radix-ui/react-switch";
 
 import { cn } from "../utils";
 
-export const Switch = ({
+export const SwitchRoot = ({
   className,
   ...props
 }: ComponentPropsWithRef<typeof SwitchPrimitives.Root>) => (
@@ -15,11 +15,26 @@ export const Switch = ({
       className,
     )}
     {...props}
-  >
-    <SwitchPrimitives.Thumb
-      className={cn(
-        "pointer-events-none block size-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0",
-      )}
-    />
-  </SwitchPrimitives.Root>
+  />
+);
+
+export const SwitchThumb = ({
+  className,
+  ...props
+}: ComponentPropsWithRef<typeof SwitchPrimitives.Thumb>) => (
+  <SwitchPrimitives.Thumb
+    className={cn(
+      "pointer-events-none block size-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0",
+      className,
+    )}
+    {...props}
+  />
+);
+
+export const Switch = (
+  props: ComponentPropsWithRef<typeof SwitchPrimitives.Root>,
+) => (
+  <SwitchRoot {...props}>
+    <SwitchThumb />
+  </SwitchRoot>
 );

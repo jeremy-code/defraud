@@ -21,7 +21,9 @@ export const verifyToken = async (token: FormDataEntryValue) => {
   );
 
   if (!response.success) {
-    throw new AggregateError(response["error-codes"].map((e) => new Error(e)));
+    throw response["error-codes"].length === 1 ?
+        new Error(response["error-codes"].at(0))
+      : new AggregateError(response["error-codes"].map((e) => new Error(e)));
   }
 
   return response;

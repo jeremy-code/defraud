@@ -12,6 +12,10 @@ const subscribe = (onStoreChange: () => void) => {
 
 const getSnapshot = () => navigator.onLine;
 
+/**
+ * Returns whether the client is online (i.e. connected to the Internet) or
+ * offline based on `online` and `offline` {@link Window} events.
+ */
 export const useIsOnline = () => {
   return useSyncExternalStore(subscribe, getSnapshot);
 };

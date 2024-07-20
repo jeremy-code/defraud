@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { Button, type ButtonProps } from "@defraud/ui/components";
+import { LoadingButton, type LoadingButtonProps } from "@/components/form";
 import type { ProviderRecord } from "@/lib/auth";
 import { OAuthIcon } from "./OAuthIcon";
 
@@ -11,13 +11,13 @@ const oAuthButtonVariants = cva<{
     id: {
       github:
         "bg-gray-950 text-background hover:bg-gray-800 dark:bg-gray-50 dark:hover:bg-gray-200",
-      discord: "bg-[#5865F2] text-white hover:bg-[#8891F2]",
+      discord: "bg-[#5865f2] text-white hover:bg-[#8891f2]",
     },
   },
 });
 
 type OAuthButtonProps = Required<VariantProps<typeof oAuthButtonVariants>> &
-  ButtonProps;
+  LoadingButtonProps;
 
 export const OAuthButton = ({
   id,
@@ -26,9 +26,9 @@ export const OAuthButton = ({
   ...rest
 }: OAuthButtonProps) => {
   return (
-    <Button className={oAuthButtonVariants({ id, className })} {...rest}>
+    <LoadingButton className={oAuthButtonVariants({ id, className })} {...rest}>
       <OAuthIcon id={id} />
       {children}
-    </Button>
+    </LoadingButton>
   );
 };

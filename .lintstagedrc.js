@@ -6,5 +6,5 @@ module.exports = {
    *
    * @see {@link https://turbo.build/repo/docs/reference/run}
    */
-  "*.{js,jsx,ts,tsx}": "pnpm lint --",
+  "*.{js,jsx,ts,tsx}": "turbo run lint --",
 };

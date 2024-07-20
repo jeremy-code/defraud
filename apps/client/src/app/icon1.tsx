@@ -9,7 +9,7 @@ import { ImageResponse } from "next/og";
 
 import { Logo } from "@/components/misc/Logo";
 
-const SIZES = {
+export const SIZES = {
   "icon-16x16": { width: 16, height: 16 },
   "icon-32x32": { width: 32, height: 32 },
   "icon-192x192": { width: 192, height: 192 },

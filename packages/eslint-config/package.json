@@ -15,12 +15,12 @@
     "eslint-plugin-drizzle": "^0.2.3",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.9.0",
-    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react": "^7.34.4",
     "eslint-plugin-react-compiler": "0.0.0-experimental-0998c1e-20240625",
     "eslint-plugin-react-hooks": "rc",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "globals": "^15.6.0",
-    "typescript": "^5.5.2",
+    "globals": "^15.8.0",
+    "typescript": "^5.5.3",
     "typescript-eslint": "^7.14.1"
   }
 }

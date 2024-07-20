@@ -6,7 +6,7 @@ export const Footer = ({ className, ...rest }: ComponentProps<"footer">) => {
   return (
     <footer className={cn("border-t", className)} {...rest}>
       <div className="container my-4 flex place-content-center">
-        <span>
+        <p>
           {"Made with ❤️ by "}
           <a
             className="font-medium text-primary underline underline-offset-4"
@@ -16,7 +16,7 @@ export const Footer = ({ className, ...rest }: ComponentProps<"footer">) => {
           >
             Jeremy
           </a>
-        </span>
+        </p>
       </div>
     </footer>
   );

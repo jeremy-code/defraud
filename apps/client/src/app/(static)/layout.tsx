@@ -5,9 +5,9 @@ import { Footer, Navbar } from "@/components/layout";
 const StaticLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <Navbar />
+      <Navbar className="border-b-0" />
       {children}
-      <Footer />
+      <Footer className="border-white/20 bg-background/20 backdrop-blur-[2px]" />
     </>
   );
 };

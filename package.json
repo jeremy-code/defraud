@@ -1,6 +1,6 @@
 {
   "name": "defraud",
-  "description": "Defraud is a tool to help you identify and avoid scams",
+  "description": "Defraud is a web application that allows users to learn about scams and how to avoid them.",
   "version": "0.0.0",
   "private": true,
   "keywords": [
@@ -25,14 +25,14 @@
   "devDependencies": {
     "@defraud/eslint-config": "workspace:*",
     "@defraud/tsconfig": "workspace:*",
-    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "eslint": "^8.57.0",
-    "husky": "^9.0.11",
+    "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
-    "prettier": "^3.3.2",
+    "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
-    "turbo": "^2.0.5",
-    "typescript": "^5.5.2"
+    "turbo": "^2.0.9",
+    "typescript": "^5.5.3"
   },
   "pnpm": {
     "overrides": {
@@ -40,5 +40,5 @@
       "@types/react-dom": "npm:types-react-dom@rc"
     }
   },
-  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
 }

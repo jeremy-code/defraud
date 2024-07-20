@@ -1,17 +1,16 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [".env", "tsconfig.json"],
+  "globalDependencies": [".env*", "!.env.example"],
   "globalEnv": ["NODE_ENV"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "env": ["ANALYZE"],
-      "inputs": ["$TURBO_DEFAULT$", ".env", "tsconfig.json"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*", "!.env.example"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {
-      "dependsOn": ["^lint"],
-      "inputs": ["$TURBO_DEFAULT$", "eslint.config.js"]
+      "dependsOn": ["^lint"]
     },
     "dev": {
       "cache": false,

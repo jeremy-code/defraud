@@ -8,9 +8,19 @@ export default defineConfig({
   dialect: "postgresql",
   out: "./src/migration",
   schema: "./src/schema.ts",
-  dbCredentials: {
-    url:
-      process.env.DB_URL ??
-      "postgres://postgres:N0T4R34LPA55W0RD@example.com:5432/db_name",
-  },
+  dbCredentials:
+    process.env.DB_URL ?
+      {
+        url: process.env.DB_URL,
+      }
+    : {
+        host: process.env.DB_HOST ?? "localhost",
+        port:
+          process.env.DB_HOST === undefined ?
+            Number(process.env.DB_HOST)
+          : undefined,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME ?? "defraud",
+      },
 });

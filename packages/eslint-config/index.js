@@ -9,10 +9,9 @@ module.exports = tseslint.config(
     languageOptions: {
       parserOptions: {
         /**
-         * Automatically load tsconfig.json files
+         * Automatically load `tsconfig.json` files
          *
          * @see {@link https://typescript-eslint.io/packages/parser#experimental_useprojectservice}
-         *
          */
         EXPERIMENTAL_useProjectService: true,
       },

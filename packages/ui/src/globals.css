@@ -5,12 +5,12 @@
 @layer base {
   /* prettier-ignore */
   :root {
-    --background: 60 9.1% 97.8%;             /* stone.50 */
-    --foreground: 20 14% 4%;                 /* stone.950 */
-    --card: 60 9.1% 97.8%;                   /* stone.50 */
-    --card-foreground: 20 14% 4%;            /* stone.950 */
-    --popover: 60 9.1% 97.8%;                /* stone.50 */
-    --popover-foreground: 20 14% 4%;         /* stone.950 */
+    --background: 0 0% 100%;                 /* white */
+    --foreground: 20 14.3% 4.1%;             /* stone.950 */
+    --card: 0 0% 100%;                       /* white */
+    --card-foreground: 20 14.3% 4.1%;        /* stone.950 */
+    --popover: 0 0% 100%;                    /* white */
+    --popover-foreground: 20 14.3% 4.1%;     /* stone.950 */
     --primary: 346 77% 57%;                  /* primary.500 */
     --primary-foreground: 60 9.1% 97.8%;     /* stone.50 */
     --secondary: 60 4.8% 95.9%;              /* stone.100 */
@@ -19,20 +19,20 @@
     --muted-foreground: 25 5.3% 44.7%;       /* stone.500 */
     --accent: 60 4.8% 95.9%;                 /* stone.100 */
     --accent-foreground: 24 9.8% 10%;        /* stone.900 */
-    --destructive: 0 72.22% 50.59%;          /* red.600 */
+    --destructive: 0 84.2% 60.2%;            /* red.500 */
     --destructive-foreground: 60 9.1% 97.8%; /* stone.50 */
-    --border: 24 5.7% 82.9%;                 /* stone.300 */
-    --input: 24 5.7% 82.9%;                  /* stone.300 */
-    --ring: 24 5.4% 63.9%;                   /* stone.400 */
+    --border: 20 5.9% 90%;                   /* stone.200 */
+    --input: 20 5.9% 90%;                    /* stone.200 */
+    --ring: 20 14.3% 4.1%;                   /* stone.950 */
   }
 
   /* prettier-ignore */
-  [data-theme="dark"] {
-    --background: 20 14% 4%;                 /* stone.950 */
+  [data-theme='dark'] {
+    --background: 20 14.3% 4.1%;             /* stone.950 */
     --foreground: 60 9.1% 97.8%;             /* stone.50 */
-    --card: 20 14% 4%;                       /* stone.950 */
+    --card: 20 14.3% 4.1%;                   /* stone.950 */
     --card-foreground: 60 9.1% 97.8%;        /* stone.50 */
-    --popover: 20 14% 4%;                    /* stone.950 */
+    --popover: 20 14.3% 4.1%;                /* stone.950 */
     --popover-foreground: 60 9.1% 97.8%;     /* stone.50 */
     --primary: 346 77% 57%;                  /* primary.500 */
     --primary-foreground: 60 9.1% 97.8%;     /* stone.50 */
@@ -52,17 +52,17 @@
 
 @layer base {
   html {
-    @apply h-full antialiased;
+    @apply antialiased;
   }
 
   body {
-    @apply flex h-full flex-col bg-background text-foreground;
+    @apply flex min-h-lvh flex-col bg-background text-foreground;
 
-    & > main {
+    & > :is(main, aside) {
       @apply flex-[1_0_auto];
     }
 
-    & > :is(header, footer) {
+    & > :is(header, footer, nav) {
       @apply flex-none;
     }
   }
@@ -74,6 +74,6 @@
 
   :is(p, dd, li) {
     @apply text-pretty;
-    max-inline-size: 60ch;
+    max-inline-size: 65ch; /* equivalent to `.max-w-prose` */
   }
 }

@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import {
-  Button,
   Card,
   CardContent,
   CardDescription,
@@ -10,6 +9,7 @@ import {
   Input,
   Label,
 } from "@defraud/ui/components";
+import { LoadingButton } from "@/components/form";
 import { Logo } from "@/components/misc/Logo";
 import { providerRecords, signIn, type ProviderRecord } from "@/lib/auth";
 import { OAuthButton } from "../_components/OAuthButton";
@@ -33,14 +33,14 @@ const SignUpForm = ({ id, name, type }: ProviderRecord) => {
               required
             />
 
-            <Button type="submit" className="my-1">
+            <LoadingButton type="submit" className="my-1">
               Sign up with Email
-            </Button>
+            </LoadingButton>
           </form>
 
           <div
             role="separator"
-            className="flex items-center text-muted-foreground before:grow before:border-b before:content-[''] after:grow after:border-b after:content-['']"
+            className="flex items-center text-muted-foreground before:grow before:border-b after:grow after:border-b"
           >
             <span className="mx-4">OR</span>
           </div>
@@ -55,7 +55,7 @@ const SignUpForm = ({ id, name, type }: ProviderRecord) => {
         </form>
       );
     default:
-      throw new Error(`Unknown provider type: ${type}`);
+      throw new TypeError(`"${type}" is not a valid provider type.`);
   }
 };
 
