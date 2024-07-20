@@ -1,8 +1,7 @@
 const jsxA11y = require("eslint-plugin-jsx-a11y");
 const reactCompiler = require("eslint-plugin-react-compiler");
 const reactHooks = require("eslint-plugin-react-hooks");
-const reactRecommended = require("eslint-plugin-react/configs/recommended");
-const reactJsxRuntime = require("eslint-plugin-react/configs/jsx-runtime");
+const react = require("eslint-plugin-react");
 const tailwind = require("eslint-plugin-tailwindcss");
 const globals = require("globals");
 const tseslint = require("typescript-eslint");
@@ -13,8 +12,8 @@ module.exports = tseslint.config(
   ...base,
   ...tailwind.configs["flat/recommended"],
   jsxA11y.flatConfigs.recommended,
-  reactRecommended,
-  reactJsxRuntime,
+  react.configs.flat.recommended,
+  react.configs.flat["jsx-runtime"],
   {
     plugins: {
       "react-compiler": reactCompiler,
