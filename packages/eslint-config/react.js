@@ -39,6 +39,10 @@ module.exports = tseslint.config(
           },
         },
       ],
+      "tailwindcss/no-custom-classname": [
+        "error",
+        { whitelist: ["destructive"] },
+      ],
       "react-compiler/react-compiler": "error",
     },
     languageOptions: {

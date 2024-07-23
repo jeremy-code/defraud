@@ -5,7 +5,7 @@ import type { Metadata, Viewport } from "next";
 import { Lexend } from "next/font/google";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import { Analytics, AppProvider } from "@/components/misc";
+import { Analytics, AppProvider, Toaster } from "@/components/misc";
 
 const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
 
@@ -42,6 +42,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         <AppProvider>
           {children}
           <Analytics />
+          <Toaster />
           <ReactQueryDevtools />
         </AppProvider>
       </body>

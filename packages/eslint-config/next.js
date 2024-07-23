@@ -19,6 +19,14 @@ module.exports = tseslint.config(
     rules: {
       ...next.configs.recommended.rules,
       ...drizzle.configs.recommended.rules,
+      "drizzle/enforce-delete-with-where": [
+        "error",
+        { drizzleObjectName: ["db", "tx"] },
+      ],
+      "drizzle/enforce-update-with-where": [
+        "error",
+        { drizzleObjectName: ["db", "tx"] },
+      ],
       /**
        * `@vercel/og` (which is bundled into Next.js) uses `tw` prop
        * @see {@link https://github.com/vercel/next.js/blob/canary/packages/next/src/compiled/%40vercel/og/types.d.ts#L115}
