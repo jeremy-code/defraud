@@ -9,14 +9,14 @@ const Page = () => {
   return (
     <>
       <svg
-        aria-hidden="true"
-        className="absolute z-[calc(-infinity)] size-full from-white stroke-foreground/10 [mask-image:radial-gradient(100%_100%_at_top_right,_var(--tw-gradient-stops))]"
+        aria-hidden
+        className="absolute -z-infinity size-full from-white stroke-foreground/10 [mask:radial-gradient(100%_100%_at_top_right,_var(--tw-gradient-stops))]"
       >
         <defs>
           <pattern
             id="gridPattern"
-            width="12rem" // sizes.48 (192px)
-            height="12rem" // sizes.48 (192px)
+            width="12rem" // spacing.48 (192px)
+            height="12rem" // spacing.48 (192px)
             x="50%"
             patternUnits="userSpaceOnUse"
           >
@@ -55,11 +55,11 @@ const Page = () => {
 
         {/* 0 -> sm: bottom right, absolutely positioned, sm -> 2xl: second column, grid */}
         <div
-          aria-hidden="true"
+          aria-hidden
           className="-z-10 w-full max-w-lg max-sm:fixed max-sm:top-full max-sm:-translate-y-3/4 max-sm:translate-x-1/3"
         >
           <div className="flex aspect-square animate-float items-center rounded-full bg-gray-900 dark:bg-gray-700">
-            <div className="relative left-4 aspect-[4/5] w-1/2 rounded-[50%] bg-white">
+            <div className="relative left-4 aspect-[4/5] w-1/2 rounded-1/2 bg-white">
               <Eyeball />
             </div>
           </div>

@@ -1,6 +1,6 @@
 import typography from "@tailwindcss/typography";
 import animate from "tailwindcss-animate";
-import colors from "tailwindcss/colors";
+import radix from "tailwindcss-radix";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import type { PresetsConfig } from "tailwindcss/types/config";
 
@@ -11,18 +11,25 @@ const uiConfig: PresetsConfig = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: ["selector", "[data-theme='dark']"],
   theme: {
-    container: {
+    container: ({ theme }) => ({
       center: true,
-      padding: "1rem", // sizes.4 (16px)
-    },
+      padding: `${theme("spacing.4")}`, // 1rem (16px)
+    }),
     extend: {
+      animation: {
+        "accordion-down": "accordion-down 200ms ease-out",
+        "accordion-up": "accordion-up 200ms ease-out",
+        float: "float 2s ease-in-out infinite",
+      },
       borderColor: {
         DEFAULT: "hsl(var(--border))",
       },
-      colors: {
+      borderRadius: {
+        "1/2": "50%",
+      },
+      colors: ({ colors }) => ({
         gray: colors.stone,
         input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
@@ -64,32 +71,28 @@ const uiConfig: PresetsConfig = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-      },
+      }),
       fontFamily: {
         sans: ["var(--font-lexend)", ...fontFamily.sans],
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
         float: {
           "0%, 100%": { transform: "translateY(-1rem)" }, // equivalent to -translate-y-4
           "50%": { transform: "translateY(0)" },
         },
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        float: "float 2s ease-in-out infinite",
+      ringColor: {
+        DEFAULT: "hsl(var(--ring))",
+      },
+      ringOffsetColor: {
+        DEFAULT: "hsl(var(--background))",
+      },
+      zIndex: {
+        infinity: "calc(infinity)",
       },
     },
   },
-  plugins: [animate, typography],
+  plugins: [animate, typography, radix({ variantPrefix: "radix" })],
 };
 
 export default uiConfig;

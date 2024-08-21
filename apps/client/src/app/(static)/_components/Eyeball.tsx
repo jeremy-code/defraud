@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  useRef,
+  useState,
   type ComponentPropsWithoutRef,
   type CSSProperties,
 } from "react";
@@ -16,25 +16,34 @@ import {
 
 export const Eyeball = ({
   className,
-  ...rest
+  ...props
 }: ComponentPropsWithoutRef<"div">) => {
-  const ref = useRef<HTMLDivElement>(null);
   const mousePosition = useMousePosition();
-
-  const angleInRadians =
-    ref.current && mousePosition ?
-      calculateAngle(calculateElementCenter(ref.current), mousePosition)
-    : 0; // Default to 0 radians if ref or mousePosition is null
+  const [angleInRadians, setAngleInRadians] = useState(0);
 
   return (
-    <div ref={ref} className={cn("size-full", className)} {...rest}>
+    <div
+      ref={(node) => {
+        if (node !== null && mousePosition !== null) {
+          setAngleInRadians(
+            calculateAngle(calculateElementCenter(node), mousePosition),
+          );
+        }
+      }}
+      className={cn("size-full", className)}
+      {...props}
+    >
       <div
-        // Using `offset-path` to animate the eyeball along an ellipse half the
-        // size of its parent, based on the angle. Using transform properties
-        // (e.g. `rotate()`) would be simpler, but has performance limitations
+        // Set `offset` to animate the eyeball along an ellipse half the size of
+        // its parent based on the angle toward the mouse position. Using CSS
+        // transform functions would be simpler, but has performance limitations
         // (and in my opinion, is less understandable).
-        className="aspect-[2] w-1/2 rounded-[50%] bg-gray-900 [offset:ellipse(25%_25%)_calc(var(--turns)*100%)] dark:bg-gray-800"
-        style={{ "--turns": angleInRadians / RADIANS_IN_TURN } as CSSProperties} // Convert radians to turns (2π radians = 1 turn)
+        className="aspect-video w-1/2 rounded-1/2 bg-gray-900 [offset:ellipse(25%_25%)_calc(var(--turns)*100%)] dark:bg-gray-800"
+        style={
+          {
+            "--turns": (angleInRadians / RADIANS_IN_TURN).toFixed(2), // Convert radians to turns (2π radians = 1 turn)
+          } as CSSProperties
+        }
       />
     </div>
   );

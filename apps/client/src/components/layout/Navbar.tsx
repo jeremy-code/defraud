@@ -10,7 +10,7 @@ export const Navbar = ({ className, ...rest }: ComponentProps<"header">) => {
     <header className={cn("border-b", className)} {...rest}>
       <div className="container flex justify-between py-4">
         <Link className="flex items-center gap-2 font-semibold" href="/">
-          {/* sizes.6 = 1.5rem (24px) aligns with line height */}
+          {/* spacing.6 = 1.5rem (24px) aligns with line height */}
           <Logo className="size-[1lh]" />
           Defraud
         </Link>

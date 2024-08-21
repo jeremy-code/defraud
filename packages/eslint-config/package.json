@@ -16,10 +16,10 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-compiler": "0.0.0-experimental-9ed098e-20240725",
+    "eslint-plugin-react-compiler": "0.0.0-experimental-eeb1b2a-20240818",
     "eslint-plugin-react-hooks": "rc",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "globals": "^15.8.0",
+    "globals": "^15.9.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^7.14.1"
   }

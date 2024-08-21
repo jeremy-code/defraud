@@ -33,7 +33,7 @@ const OpenGraphImage = async () => {
           // Tailwind CSS flex gap classes are currently not supported, though
           // the actual CSS property is supported. See
           // https://github.com/vercel/satori/issues/615
-          style={{ gap: "1.5rem" }} // sizes.6 (24px)
+          style={{ gap: "1.5rem" }} // spacing.6 (24px)
         >
           <Logo />
           <p tw="text-6xl">Defraud</p>

@@ -7,7 +7,7 @@ const StaticLayout = ({ children }: { children: ReactNode }) => {
     <>
       <Navbar className="border-b-0" />
       {children}
-      <Footer className="border-white/20 bg-background/20 backdrop-blur-[2px]" />
+      <Footer className="border-t-white/20 bg-background/20 backdrop-blur-sm" />
     </>
   );
 };

@@ -27,7 +27,7 @@
   }
 
   /* prettier-ignore */
-  [data-theme='dark'] {
+  [data-theme="dark"] {
     --background: 20 14.3% 4.1%;             /* stone.950 */
     --foreground: 60 9.1% 97.8%;             /* stone.50 */
     --card: 20 14.3% 4.1%;                   /* stone.950 */
@@ -68,12 +68,30 @@
   }
 
   :is(h1, h2, h3, h4, h5, h6, dt, blockquote, figcaption) {
-    @apply text-balance;
-    max-inline-size: 25ch;
+    @apply max-w-[25ch] text-balance;
   }
 
   :is(p, dd, li) {
-    @apply text-pretty;
-    max-inline-size: 65ch; /* equivalent to `.max-w-prose` */
+    @apply max-w-prose text-pretty;
+  }
+}
+
+@layer utilities {
+  @keyframes accordion-down {
+    from {
+      @apply h-0;
+    }
+    to {
+      @apply h-radix-accordion-content;
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      @apply h-radix-accordion-content;
+    }
+    to {
+      @apply h-0;
+    }
   }
 }

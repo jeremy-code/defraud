@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactElement, ReactNode } from "react";
+import type { ComponentProps, ReactElement, ReactNode } from "react";
 import { create } from "zustand";
 
 import { ToastAction, type ToastProps } from "@defraud/ui/components/toast";
@@ -12,7 +12,7 @@ type ToasterToast = ToastProps & {
   id: string;
   title?: ReactNode;
   description?: ReactNode;
-  action?: ReactElement<typeof ToastAction>;
+  action?: ReactElement<ComponentProps<typeof ToastAction>, typeof ToastAction>;
 };
 
 type ToastState = {
@@ -31,31 +31,27 @@ export const useToastStore = create<ToastState>((set, get) => ({
   toastTimeouts: new Map<string, ReturnType<typeof setTimeout>>(),
   addToast: (toast) =>
     set((state) => ({
-      ...state,
       toasts: [toast, ...state.toasts].slice(0, TOAST_LIMIT),
     })),
   updateToast: (toast) =>
     set((state) => ({
-      ...state,
       toasts: state.toasts.map((t) =>
         t.id === toast.id ? { ...t, ...toast } : t,
       ),
     })),
   dismissToast: (toastId) => {
     const { toasts, toastTimeouts, removeToast } = get();
-    const queue = [...(toastId ? [toastId] : toasts.map((t) => t.id))];
+    const toastIds = toastId ? [toastId] : toasts.map((t) => t.id);
 
-    queue.forEach((id) => {
-      if (toastTimeouts.has(id)) {
-        return;
+    toastIds.forEach((id) => {
+      if (!toastTimeouts.has(id)) {
+        const timeout = setTimeout(() => {
+          toastTimeouts.delete(id);
+          removeToast(id);
+        }, TOAST_REMOVE_DELAY);
+
+        toastTimeouts.set(id, timeout);
       }
-
-      const timeout = setTimeout(() => {
-        toastTimeouts.delete(id);
-        removeToast(id);
-      }, TOAST_REMOVE_DELAY);
-
-      toastTimeouts.set(id, timeout);
     });
 
     set({
@@ -67,12 +63,12 @@ export const useToastStore = create<ToastState>((set, get) => ({
   removeToast: (toastId) =>
     set((state) =>
       toastId === undefined ?
-        { ...state, toasts: [] }
-      : { ...state, toasts: state.toasts.filter((t) => t.id !== toastId) },
+        { toasts: [] }
+      : { toasts: state.toasts.filter((t) => t.id !== toastId) },
     ),
 }));
 
-export function toast({ ...props }: Omit<ToasterToast, "id">) {
+export const toast = ({ ...props }: Omit<ToasterToast, "id">) => {
   const id = crypto.randomUUID();
   const { addToast, updateToast, dismissToast } = useToastStore.getState();
 
@@ -91,4 +87,4 @@ export function toast({ ...props }: Omit<ToasterToast, "id">) {
   });
 
   return { id, dismiss, update };
-}
+};

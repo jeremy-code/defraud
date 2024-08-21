@@ -1,6 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { create } from "zustand";
+import { useShallow } from "zustand/react/shallow";
 
 import type { Point } from "@/utils/math";
+
+type MouseEventState = {
+  mouseEvent: MouseEvent | null;
+  setMouseEvent: (mouseEvent: MouseEvent) => void;
+};
+
+const useMouseEventStore = create<MouseEventState>((set) => ({
+  mouseEvent: null,
+  setMouseEvent: (mouseEvent) => set(() => ({ mouseEvent })),
+}));
 
 /**
  * Returns the current mouse position relative to the viewport, either as a
@@ -8,12 +20,17 @@ import type { Point } from "@/utils/math";
  * occurred (such as on a touchscreen device).
  */
 export const useMousePosition = () => {
-  const [mousePosition, setMousePosition] = useState<Point | null>(null);
+  const mousePosition = useMouseEventStore<Point | null>(
+    useShallow(
+      ({ mouseEvent }) =>
+        mouseEvent && { x: mouseEvent.clientX, y: mouseEvent.clientY },
+    ),
+  );
 
   useEffect(() => {
     // TODO: Wrap in `useEffectEvent` when it is no longer experimental.
     const onMouseMove = (ev: MouseEvent) => {
-      setMousePosition({ x: ev.clientX, y: ev.clientY });
+      useMouseEventStore.getState().setMouseEvent(ev);
     };
 
     window.addEventListener("mousemove", onMouseMove);

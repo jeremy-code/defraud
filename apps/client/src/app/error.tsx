@@ -24,7 +24,7 @@ const Error = ({ error, reset }: ErrorProps) => {
       <Navbar />
       <main className="container flex flex-col-reverse items-center justify-center gap-12 py-4 lg:flex-row">
         <div className="flex flex-col gap-2">
-          {error.digest && (
+          {!!error.digest && (
             <p className="text-sm italic text-muted-foreground/60">
               ID: {error.digest}
             </p>

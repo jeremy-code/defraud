@@ -1,5 +1,7 @@
 "use client";
 
+import type { ComponentPropsWithRef } from "react";
+
 import {
   Toast,
   ToastClose,
@@ -10,16 +12,18 @@ import {
 } from "@defraud/ui/components/toast";
 import { useToastStore } from "@/hooks/useToast";
 
-export function Toaster() {
-  const { toasts } = useToastStore();
+export const Toaster = (props: ComponentPropsWithRef<typeof ToastProvider>) => {
+  const toasts = useToastStore((state) => state.toasts);
 
   return (
-    <ToastProvider>
+    <ToastProvider {...props}>
       {toasts.map(({ id, title, description, action, ...props }) => (
         <Toast key={id} {...props}>
           <div className="flex flex-col gap-1">
-            {title && <ToastTitle>{title}</ToastTitle>}
-            {description && <ToastDescription>{description}</ToastDescription>}
+            {!!title && <ToastTitle>{title}</ToastTitle>}
+            {!!description && (
+              <ToastDescription>{description}</ToastDescription>
+            )}
           </div>
           {action}
           <ToastClose />
@@ -28,4 +32,4 @@ export function Toaster() {
       <ToastViewport />
     </ToastProvider>
   );
-}
+};

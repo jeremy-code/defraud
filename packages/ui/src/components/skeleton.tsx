@@ -8,7 +8,7 @@ export const Skeleton = ({
 }: ComponentPropsWithRef<"div">) => {
   return (
     <div
-      className={cn("animate-pulse rounded-md bg-foreground/10", className)}
+      className={cn("animate-pulse rounded-xl bg-muted", className)}
       {...props}
     />
   );

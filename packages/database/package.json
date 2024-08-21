@@ -17,9 +17,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@auth/drizzle-adapter": "^1.4.1",
+    "@auth/drizzle-adapter": "^1.4.2",
     "@next/env": "rc",
-    "drizzle-orm": "^0.32.1",
+    "drizzle-orm": "^0.33.0",
     "next-auth": "beta",
     "pg": "^8.12.0"
   },
@@ -27,7 +27,7 @@
     "@defraud/eslint-config": "workspace:*",
     "@defraud/tsconfig": "workspace:*",
     "@types/pg": "^8.11.6",
-    "drizzle-kit": "^0.23.0",
+    "drizzle-kit": "^0.24.0",
     "eslint": "^8.57.0"
   }
 }
