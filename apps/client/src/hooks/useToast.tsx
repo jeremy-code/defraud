@@ -26,7 +26,7 @@ type ToastState = {
   removeToast: (toastId?: ToasterToast["id"]) => void;
 };
 
-export const useToastStore = create<ToastState>((set, get) => ({
+export const useToastStore = create<ToastState>((set) => ({
   toasts: [],
   toastTimeouts: new Map<string, ReturnType<typeof setTimeout>>(),
   addToast: (toast) =>
@@ -39,36 +39,37 @@ export const useToastStore = create<ToastState>((set, get) => ({
         t.id === toast.id ? { ...t, ...toast } : t,
       ),
     })),
-  dismissToast: (toastId) => {
-    const { toasts, toastTimeouts, removeToast } = get();
-    const toastIds = toastId ? [toastId] : toasts.map((t) => t.id);
+  dismissToast: (toastId) =>
+    set((state) => {
+      const toastIds = toastId ? [toastId] : state.toasts.map((t) => t.id);
 
-    toastIds.forEach((id) => {
-      if (!toastTimeouts.has(id)) {
-        const timeout = setTimeout(() => {
-          toastTimeouts.delete(id);
-          removeToast(id);
-        }, TOAST_REMOVE_DELAY);
+      toastIds.forEach((id) => {
+        if (!state.toastTimeouts.has(id)) {
+          const timeout = setTimeout(() => {
+            state.toastTimeouts.delete(id);
+            state.removeToast(id);
+          }, TOAST_REMOVE_DELAY);
 
-        toastTimeouts.set(id, timeout);
-      }
-    });
+          state.toastTimeouts.set(id, timeout);
+        }
+      });
 
-    set({
-      toasts: toasts.map((t) =>
-        t.id === toastId || toastId === undefined ? { ...t, open: false } : t,
-      ),
-    });
-  },
+      return {
+        toasts: state.toasts.map((t) =>
+          toastId === undefined || t.id === toastId ? { ...t, open: false } : t,
+        ),
+      };
+    }),
   removeToast: (toastId) =>
-    set((state) =>
-      toastId === undefined ?
-        { toasts: [] }
-      : { toasts: state.toasts.filter((t) => t.id !== toastId) },
-    ),
+    set((state) => ({
+      toasts:
+        toastId === undefined ?
+          []
+        : state.toasts.filter((t) => t.id !== toastId),
+    })),
 }));
 
-export const toast = ({ ...props }: Omit<ToasterToast, "id">) => {
+export const toast = (props: Omit<ToasterToast, "id">) => {
   const id = crypto.randomUUID();
   const { addToast, updateToast, dismissToast } = useToastStore.getState();
 

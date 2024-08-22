@@ -15,15 +15,20 @@ const Page = () => {
         <defs>
           <pattern
             id="gridPattern"
-            width="12rem" // spacing.48 (192px)
-            height="12rem" // spacing.48 (192px)
+            width={200}
+            height={200}
             x="50%"
             patternUnits="userSpaceOnUse"
           >
             <path d="M0.5 200V0.5H200" fill="none" />
           </pattern>
         </defs>
-        <rect className="size-full stroke-0" fill="url(#gridPattern)" />
+        <rect
+          height="100%"
+          width="100%"
+          strokeWidth={0}
+          fill="url(#gridPattern)"
+        />
       </svg>
 
       <main className="container grid place-items-center gap-4 py-4 max-sm:grid-rows-[3fr_1fr] sm:grid-cols-2">
@@ -36,7 +41,7 @@ const Page = () => {
               </mark>
               {" from scams!"}
             </h1>
-            <p className="max-w-[42ch] text-muted-foreground md:text-lg">
+            <p className="max-w-[40ch] text-muted-foreground md:text-lg">
               {"Identify and stay away from those "}
               <em>pesky</em>
               {" scammers on the interwebs."}
@@ -53,7 +58,7 @@ const Page = () => {
           </div>
         </div>
 
-        {/* 0 -> sm: bottom right, absolutely positioned, sm -> 2xl: second column, grid */}
+        {/* 0 -> sm: bottom right, positioned absolute, sm -> 2xl: second column, grid */}
         <div
           aria-hidden
           className="-z-10 w-full max-w-lg max-sm:fixed max-sm:top-full max-sm:-translate-y-3/4 max-sm:translate-x-1/3"

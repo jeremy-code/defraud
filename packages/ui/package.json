@@ -21,7 +21,7 @@
     "@radix-ui/react-toast": "^1.2.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.428.0",
+    "lucide-react": "^0.429.0",
     "react": "rc",
     "tailwind-merge": "^2.5.2"
   },
@@ -29,7 +29,7 @@
     "@defraud/eslint-config": "workspace:*",
     "@defraud/tsconfig": "workspace:*",
     "@tailwindcss/typography": "^0.5.14",
-    "@types/node": "^22.4.1",
+    "@types/node": "^22.5.0",
     "@types/react": "npm:types-react@rc",
     "autoprefixer": "^10.4.20",
     "tailwindcss": "^3.4.10",

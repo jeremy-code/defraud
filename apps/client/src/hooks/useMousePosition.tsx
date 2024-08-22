@@ -15,9 +15,9 @@ const useMouseEventStore = create<MouseEventState>((set) => ({
 }));
 
 /**
- * Returns the current mouse position relative to the viewport, either as a
- * `Point` with `x` and `y` properties or `null` if no `mousemove` event has
- * occurred (such as on a touchscreen device).
+ * Returns the current mouse position, either as a {@link Point} with `x` and
+ * `y` properties relative to the viewport or `null` if no `mousemove` event has
+ * occurred yet.
  */
 export const useMousePosition = () => {
   const mousePosition = useMouseEventStore<Point | null>(

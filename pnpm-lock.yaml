@@ -67,10 +67,10 @@ importers:
         version: 5.52.0(react@19.0.0-rc-6d3110b4d9-20240531)
       "@vercel/analytics":
         specifier: ^1.3.1
-        version: 1.3.1(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
+        version: 1.3.1(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
       "@vercel/speed-insights":
         specifier: ^1.0.12
-        version: 1.0.12(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
+        version: 1.0.12(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -81,20 +81,20 @@ importers:
         specifier: ^10.1.1
         version: 10.1.1
       keyv:
-        specifier: ^5.0.0
-        version: 5.0.0
+        specifier: ^5.0.1
+        version: 5.0.1
       ky:
-        specifier: ^1.7.0
-        version: 1.7.0
+        specifier: ^1.7.1
+        version: 1.7.1
       lucide-react:
-        specifier: ^0.428.0
-        version: 0.428.0(react@19.0.0-rc-6d3110b4d9-20240531)
+        specifier: ^0.429.0
+        version: 0.429.0(react@19.0.0-rc-6d3110b4d9-20240531)
       next:
         specifier: rc
-        version: 15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
+        version: 15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
       next-auth:
         specifier: beta
-        version: 5.0.0-beta.19(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(nodemailer@6.9.14)(react@19.0.0-rc-6d3110b4d9-20240531)
+        version: 5.0.0-beta.19(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(nodemailer@6.9.14)(react@19.0.0-rc-6d3110b4d9-20240531)
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
@@ -121,8 +121,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/tsconfig
       "@keyv/redis":
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^3.0.1
+        version: 3.0.1
       "@tanstack/react-query-devtools":
         specifier: ^5.52.0
         version: 5.52.0(@tanstack/react-query@5.52.0(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
@@ -130,8 +130,8 @@ importers:
         specifier: ^0.2.1
         version: 0.2.1
       "@types/node":
-        specifier: ^22.4.1
-        version: 22.4.1
+        specifier: ^22.5.0
+        version: 22.5.0
       "@types/react":
         specifier: npm:types-react@rc
         version: types-react@19.0.0-rc.0
@@ -139,8 +139,8 @@ importers:
         specifier: npm:types-react-dom@rc
         version: types-react-dom@19.0.0-rc.0
       babel-plugin-react-compiler:
-        specifier: 0.0.0-experimental-7d62301-20240819
-        version: 0.0.0-experimental-7d62301-20240819
+        specifier: 0.0.0-experimental-7d62301-20240821
+        version: 0.0.0-experimental-7d62301-20240821
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -259,8 +259,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       lucide-react:
-        specifier: ^0.428.0
-        version: 0.428.0(react@19.0.0-rc-8971381549-20240625)
+        specifier: ^0.429.0
+        version: 0.429.0(react@19.0.0-rc-8971381549-20240625)
       react:
         specifier: rc
         version: 19.0.0-rc-8971381549-20240625
@@ -278,8 +278,8 @@ importers:
         specifier: ^0.5.14
         version: 0.5.14(tailwindcss@3.4.10)
       "@types/node":
-        specifier: ^22.4.1
-        version: 22.4.1
+        specifier: ^22.5.0
+        version: 22.5.0
       "@types/react":
         specifier: npm:types-react@rc
         version: types-react@19.0.0-rc.0
@@ -1495,17 +1495,17 @@ packages:
         integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==,
       }
 
-  "@keyv/redis@3.0.0":
+  "@keyv/redis@3.0.1":
     resolution:
       {
-        integrity: sha512-pqtgyG3DcqWQQD1/9UXA+hsJueSX77qqGEJU+s779v/UifPXoZLSzyFEzxyDU8BRdxJft+NC53yUe0UMHUN2VQ==,
+        integrity: sha512-eyqzomQC76LjUOEkPP8rdR2Fk4eZBSS0Ma47i7CNiQuv8NCw3trZvghx8L5Xruk7XPEj/eRAMrAxP//xQFOPdQ==,
       }
     engines: { node: ">= 18" }
 
-  "@keyv/serialize@1.0.0":
+  "@keyv/serialize@1.0.1":
     resolution:
       {
-        integrity: sha512-BckrffCXqE2eMxl8LjOpc6vY3TTduILoiFwytNhJtQfhMDKhepq4+EAyP9qMCy38Fxs9g4RRCe/6mimdap1/vQ==,
+        integrity: sha512-kKXeynfORDGPUEEl2PvTExM2zs+IldC6ZD8jPcfvI351MDNtfMlw9V9s4XZXuJNDK2qR5gbEKxRyoYx3quHUVQ==,
       }
 
   "@next/bundle-analyzer@15.0.0-rc.0":
@@ -2038,10 +2038,10 @@ packages:
         integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==,
       }
 
-  "@types/node@22.4.1":
+  "@types/node@22.5.0":
     resolution:
       {
-        integrity: sha512-1tbpb9325+gPnKK0dMm+/LMriX0vKxf6RnB0SZUqfyVkQ4fMgUSySqhxE/y8Jvs4NyF1yHzTfG9KlnkIODxPKg==,
+        integrity: sha512-DkFrJOe+rfdHTqqMg0bSNlGlQ85hSoh2TPzZyhHsXnMtligRWpxUySiyw8FY14ITt24HVCiQPWxS3KO/QlGmWg==,
       }
 
   "@types/pg@8.11.6":
@@ -2410,10 +2410,10 @@ packages:
         integrity: sha512-goKlv8DZrK9hUh975fnHzhNIO4jUnFCfv/dszV5VwUGDFjI6vQ2VwoyjYjYNEbBE8AH87TduWP5uyDR1D+Iteg==,
       }
 
-  babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819:
+  babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821:
     resolution:
       {
-        integrity: sha512-MtERcQLDo4ZlkDmZXfdPJoW8s8P7mGvQH6vwFLHdllOrezDow8Njg+jJqU4G9awKAKd5hv8znxfb2rsvJf78GA==,
+        integrity: sha512-jkkE/OzJpu5tOa3GwGM3vgaBAjkOGYmKEYyo6NXNaCtt/ITYjs2Tq2+MmrDLx1nsxBDi91rB+MLV8kes/KQ0lQ==,
       }
 
   balanced-match@1.0.2:
@@ -4074,16 +4074,16 @@ packages:
         integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==,
       }
 
-  keyv@5.0.0:
+  keyv@5.0.1:
     resolution:
       {
-        integrity: sha512-qtmxo+NR06YxIrywQzkxQG5bsNKR4GlOHZzrJHKsRXATU8ivqptnMllSuPIJRtaLmDGWdAK/n6JVfbBgRfTuXQ==,
+        integrity: sha512-NH+3ditq1O5uTSQiiHrGOTkwUniRox/lZ8tHARdsu5Skyv0AhZca0OCycWfR1fTECvSRftMQnXqx7cBpxo8G1g==,
       }
 
-  ky@1.7.0:
+  ky@1.7.1:
     resolution:
       {
-        integrity: sha512-g+S6ZMESSMuxrrbcDioBKSjBj8Xvam2WmLso+q1Ub7TTYCGS68XbSEM+eA3VSTmXJfR1uQjsTooC2tCsC3bW6g==,
+        integrity: sha512-KJ/IXXkFhTDqxcN8wKqMXk1/UoOpc0UnOB6H7QcqlPInh/M2B5Mlj+i9exez1w4RSwJhNFmHiUDPriAYFwb5VA==,
       }
     engines: { node: ">=18" }
 
@@ -4212,10 +4212,10 @@ packages:
         integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==,
       }
 
-  lucide-react@0.428.0:
+  lucide-react@0.429.0:
     resolution:
       {
-        integrity: sha512-rGrzslfEcgqwh+TLBC5qJ8wvVIXhLvAIXVFKNHndYyb1utSxxn9rXOC+1CNJLi6yNOooyPqIs6+3YCp6uSiEvg==,
+        integrity: sha512-548DahFy7Ey+0OPlOyZ6ipnbGJzewv8gq2DxDrnAzWZ4RN4+3XyIwQXhD4AQvuREFjS1EnbAgOMaYB0VQyaK1g==,
       }
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
@@ -6582,13 +6582,13 @@ snapshots:
       "@jridgewell/resolve-uri": 3.1.2
       "@jridgewell/sourcemap-codec": 1.4.15
 
-  "@keyv/redis@3.0.0":
+  "@keyv/redis@3.0.1":
     dependencies:
       ioredis: 5.4.1
     transitivePeerDependencies:
       - supports-color
 
-  "@keyv/serialize@1.0.0":
+  "@keyv/serialize@1.0.1":
     dependencies:
       buffer: 6.0.3
 
@@ -6912,13 +6912,13 @@ snapshots:
 
   "@types/json5@0.0.29": {}
 
-  "@types/node@22.4.1":
+  "@types/node@22.5.0":
     dependencies:
       undici-types: 6.19.8
 
   "@types/pg@8.11.6":
     dependencies:
-      "@types/node": 22.4.1
+      "@types/node": 22.5.0
       pg-protocol: 1.6.1
       pg-types: 4.0.2
 
@@ -7018,16 +7018,16 @@ snapshots:
 
   "@ungap/structured-clone@1.2.0": {}
 
-  "@vercel/analytics@1.3.1(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)":
+  "@vercel/analytics@1.3.1(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)":
     dependencies:
       server-only: 0.0.1
     optionalDependencies:
-      next: 15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
+      next: 15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
       react: 19.0.0-rc-6d3110b4d9-20240531
 
-  "@vercel/speed-insights@1.0.12(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)":
+  "@vercel/speed-insights@1.0.12(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)":
     optionalDependencies:
-      next: 15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
+      next: 15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
       react: 19.0.0-rc-6d3110b4d9-20240531
 
   acorn-jsx@5.3.2(acorn@8.11.3):
@@ -7169,7 +7169,7 @@ snapshots:
     dependencies:
       deep-equal: 2.2.3
 
-  babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819:
+  babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821:
     dependencies:
       "@babel/generator": 7.2.0
       "@babel/types": 7.25.2
@@ -8252,11 +8252,11 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  keyv@5.0.0:
+  keyv@5.0.1:
     dependencies:
-      "@keyv/serialize": 1.0.0
+      "@keyv/serialize": 1.0.1
 
-  ky@1.7.0: {}
+  ky@1.7.1: {}
 
   language-subtag-registry@0.3.23: {}
 
@@ -8333,11 +8333,11 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@0.428.0(react@19.0.0-rc-6d3110b4d9-20240531):
+  lucide-react@0.429.0(react@19.0.0-rc-6d3110b4d9-20240531):
     dependencies:
       react: 19.0.0-rc-6d3110b4d9-20240531
 
-  lucide-react@0.428.0(react@19.0.0-rc-8971381549-20240625):
+  lucide-react@0.429.0(react@19.0.0-rc-8971381549-20240625):
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
 
@@ -8388,10 +8388,10 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-auth@5.0.0-beta.19(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(nodemailer@6.9.14)(react@19.0.0-rc-6d3110b4d9-20240531):
+  next-auth@5.0.0-beta.19(next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531))(nodemailer@6.9.14)(react@19.0.0-rc-6d3110b4d9-20240531):
     dependencies:
       "@auth/core": 0.32.0(nodemailer@6.9.14)
-      next: 15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
+      next: 15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531)
       react: 19.0.0-rc-6d3110b4d9-20240531
     optionalDependencies:
       nodemailer: 6.9.14
@@ -8409,7 +8409,7 @@ snapshots:
       react: 19.0.0-rc-6d3110b4d9-20240531
       react-dom: 19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531)
 
-  next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240819)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531):
+  next@15.0.0-rc.0(@babel/core@7.24.8)(babel-plugin-react-compiler@0.0.0-experimental-7d62301-20240821)(react-dom@19.0.0-rc-6d3110b4d9-20240531(react@19.0.0-rc-6d3110b4d9-20240531))(react@19.0.0-rc-6d3110b4d9-20240531):
     dependencies:
       "@next/env": 15.0.0-rc.0
       "@swc/helpers": 0.5.11
@@ -8430,7 +8430,7 @@ snapshots:
       "@next/swc-win32-arm64-msvc": 15.0.0-rc.0
       "@next/swc-win32-ia32-msvc": 15.0.0-rc.0
       "@next/swc-win32-x64-msvc": 15.0.0-rc.0
-      babel-plugin-react-compiler: 0.0.0-experimental-7d62301-20240819
+      babel-plugin-react-compiler: 0.0.0-experimental-7d62301-20240821
       sharp: 0.33.4
     transitivePeerDependencies:
       - "@babel/core"

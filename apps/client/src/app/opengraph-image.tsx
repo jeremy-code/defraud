@@ -3,7 +3,7 @@ import ky from "ky";
 
 import { Logo } from "@/components/misc/Logo";
 
-export const alt = "Defraud OG Image";
+export const alt = "Defraud OpenGraph Image";
 
 export const size = {
   width: 1200,
@@ -14,11 +14,15 @@ export const size = {
 // https://github.com/vercel/satori#fonts
 const lexendSemiBold = ky(
   // See https://docs.github.com/en/rest/repos/contents
-  "https://api.github.com/repos/googlefonts/lexend/contents/fonts/lexend/ttf/Lexend-SemiBold.ttf",
+  new URL(
+    "/repos/googlefonts/lexend/contents/fonts/lexend/ttf/Lexend-SemiBold.ttf",
+    "https://api.github.com",
+  ),
   {
     cache: "force-cache",
     headers: {
-      Accept: "application/vnd.github.raw+json", //  Returns the raw file contents for files and symlinks.
+      Accept: "application/vnd.github.raw+json", // Returns the raw file contents for files and symlinks
+      "X-GitHub-Api-Version": "2022-11-28", // See https://docs.github.com/en/rest/about-the-rest-api/api-versions
     },
   },
 ).arrayBuffer();

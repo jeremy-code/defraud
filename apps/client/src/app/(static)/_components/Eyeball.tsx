@@ -41,7 +41,8 @@ export const Eyeball = ({
         className="aspect-video w-1/2 rounded-1/2 bg-gray-900 [offset:ellipse(25%_25%)_calc(var(--turns)*100%)] dark:bg-gray-800"
         style={
           {
-            "--turns": (angleInRadians / RADIANS_IN_TURN).toFixed(2), // Convert radians to turns (2π radians = 1 turn)
+            // Convert radians to turns (2π radians = 1 turn)
+            "--turns": (angleInRadians / RADIANS_IN_TURN).toFixed(2),
           } as CSSProperties
         }
       />

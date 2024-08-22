@@ -12,7 +12,18 @@ export const env = createEnv({
     KV_URL: z.string().url(),
   },
   client: {
-    NEXT_PUBLIC_CF_TURNSTILE_SITE_KEY: z.string().startsWith("0x").length(24),
+    NEXT_PUBLIC_CF_TURNSTILE_SITE_KEY: z.union([
+      z.string().startsWith("0x").length(24),
+      // Valid sitekeys for testing
+      // https://developers.cloudflare.com/turnstile/troubleshooting/testing/
+      z.enum([
+        "1x00000000000000000000AA",
+        "2x00000000000000000000AB",
+        "1x00000000000000000000BB",
+        "2x00000000000000000000BB",
+        "3x00000000000000000000FF",
+      ]),
+    ]),
   },
   /**
    * Due to how Next.js statically analyzes environment variables on the client,

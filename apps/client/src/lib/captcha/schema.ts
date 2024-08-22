@@ -5,7 +5,7 @@ export const ValidationRequestParams = z.object({
   secret: z.union([
     z.string().startsWith("0x").length(35),
     // Valid secret keys for testing
-    // https://developers.cloudflare.com/turnstile/reference/testing/
+    // https://developers.cloudflare.com/turnstile/troubleshooting/testing/
     z.enum([
       "1x0000000000000000000000000000000AA",
       "2x0000000000000000000000000000000AA",
@@ -32,7 +32,7 @@ const ERROR_CODES = [
 export const ValidationResponse = z.discriminatedUnion("success", [
   z.object({
     success: z.literal(true),
-    challenge_ts: z.string().datetime(),
+    challenge_ts: z.string().datetime({ precision: 3 }),
     hostname: z.string(),
     "error-codes": z.array(z.enum(ERROR_CODES)),
     action: z.string(),

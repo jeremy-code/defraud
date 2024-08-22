@@ -19,13 +19,13 @@ export const Captcha = ({ params, className, ...rest }: CaptchaProps) => {
   const captchaRef = useRef<HTMLDivElement>(null);
 
   const onLoadHandler: ScriptProps["onLoad"] = () => {
-    if (!captchaRef.current || !turnstile) return;
-
-    turnstile.render(captchaRef.current, {
-      // Must be prefixed with `NEXT_PUBLIC_` to be exposed to the client
-      sitekey: env.NEXT_PUBLIC_CF_TURNSTILE_SITE_KEY,
-      ...params,
-    });
+    if (captchaRef.current && turnstile) {
+      turnstile.render(captchaRef.current, {
+        // Must be prefixed with `NEXT_PUBLIC_` to be exposed to the client
+        sitekey: env.NEXT_PUBLIC_CF_TURNSTILE_SITE_KEY,
+        ...params,
+      });
+    }
   };
 
   return (
