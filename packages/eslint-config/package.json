@@ -13,14 +13,14 @@
     "@typescript-eslint/parser": "^7.14.1",
     "eslint": "^8.57.0",
     "eslint-plugin-drizzle": "^0.2.3",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.9.0",
-    "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-compiler": "0.0.0-experimental-eeb1b2a-20240818",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-react": "^7.35.2",
+    "eslint-plugin-react-compiler": "0.0.0-experimental-5c9a529-20240911",
     "eslint-plugin-react-hooks": "rc",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "globals": "^15.9.0",
-    "typescript": "^5.5.4",
+    "typescript": "^5.6.2",
     "typescript-eslint": "^7.14.1"
   }
 }
